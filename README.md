@@ -1,1 +1,1 @@
-# lilygannone.ics385spring2026
+ICS 385 Spring 2026
