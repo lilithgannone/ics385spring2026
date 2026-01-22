@@ -8,7 +8,7 @@ My name is Lily Gannone. I am an Applied Business and Information Technology maj
 ## Week 1 – Introduction, AI and Setup
 
 ## Week 2 – HTML and CSS
-HW2: Bio Page Original - [bio.html](week2/hw2/bio.html), [styles.css](week2/hw2/styles.css)
+HW2: Bio Page Original - [bio.html](week2/hw2/bio.html), [styles.css](week2/hw2/styles.css) <br>
 HW 2(Improved)- 
 
 ## Week 3 – JavaScript
