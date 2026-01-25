@@ -50,7 +50,7 @@ Current GPA: 4.0
 
 ## Learning Goals for ICS 385
 
-In this course, I want to build a basic but solid understanding of web development and how modern websites are created and maintained. I also want to better understand how artificial intelligence is being used in everyday digital tools and business settings. My goal is to learn how these technologies can be used to support communication, creativity, and problem-solving, especially in areas like writing, marketing, and information sharing.
+In this course, I want to build a solid, basic understanding of web development, learning how modern websites are created and maintained. I also want to better understand how artificial intelligence is being used as an everyday tool in business settings. My goal is to learn how these technologies can be used to support communication, creativity, and problem-solving, especially in areas like writing, marketing, and information sharing.
 
 ## Weekly ICS 385 Projects
 
