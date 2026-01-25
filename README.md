@@ -47,6 +47,7 @@ Current GPA: 4.0
 - Digital marketing 
 - Visual communication and design  
 - Business development and administration
+- Sustainable, ethical, and adaptable practices in business
 
 ## Learning Goals for ICS 385
 
