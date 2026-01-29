@@ -65,4 +65,4 @@ HW2: Bio Page (Improved) - [Improved Live Site](https://lilithgannone.github.io/
 HW 3a: Dicee Game - [dicee.html](week3/hw3a/dicee.html), [styles.css](week3/hw3a/styles.css), [index.js](week3/hw3a/index.js)<br>
 HW 3a: Link to Dicee Game - [Dicee Game](https://lilithgannone.github.io/ics385spring2026/week3/hw3a/dicee.html)<br>
 HW 3b: Simon Game - [index.html/ simon html](week3/hw3b.simon/index.html), [styles.css](week3/hw3b.simon/styles.css), [game.js](week3/hw3b.simon/game.js)
-HW 3b: Link to Simon Game - [Simon Game]
+HW 3b: Link to Simon Game - [Simon Game](https://lilithgannone.github.io/ics385spring2026/week3/hw3b.simon/index.html)
