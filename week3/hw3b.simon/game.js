@@ -21,6 +21,7 @@ var playbackToken = 0;
 
 // AI-Generated: Mode configuration for lives, replay limits, and playback speed.
 // Beginner note: Settings for each mode (lives, replays, speed).
+//Addition note: added levels: easy and hard modes
 var modeSettings = {
   practice: { lives: 3, replays: Infinity, playbackSpeed: 650 },
   normal: { lives: 0, replays: 3, playbackSpeed: 600 },
@@ -29,9 +30,11 @@ var modeSettings = {
 
 // AI-Generated: Checkpoint levels for celebrations.
 // Beginner note: Levels where we show a celebration effect.
+//Addition note: added levels: easy and hard modes with checkpoints
 var checkpointLevels = [5, 10, 15, 20, 100];
 
 // Beginner note: Start the game when any key is pressed.
+//Addition note: added levels: easy and hard modes
 $(document).keypress(function() {
   // AI-Generated: Keypress start remains supported.
   startGame();
