@@ -69,4 +69,4 @@ HW 3b: Link to Simon Game - [Simon Game](https://lilithgannone.github.io/ics385s
 
 ### Week 4 - NodeJS
 HW 4a: Basic NodeJS - [index.js](week4/hero-hw4/index.js), [package.js](week4/hero-hw4/package.js), [package-lock.js](week4/hero-hw4/package-lock.js)<br>
-HW 4a: Read Me - [README for HW 4a](week4/hero-hw4/README.me)
+HW 4a: Read Me - [README for HW 4a](week4/hero-hw4/README.md)
