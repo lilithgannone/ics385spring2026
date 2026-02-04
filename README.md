@@ -66,3 +66,7 @@ HW 3a: Dicee Game - [dicee.html](week3/hw3a/dicee.html), [styles.css](week3/hw3a
 HW 3a: Link to Dicee Game - [Dicee Game](https://lilithgannone.github.io/ics385spring2026/week3/hw3a/dicee.html)<br>
 HW 3b: Simon Game - [index.html/ simon html](week3/hw3b.simon/index.html), [styles.css](week3/hw3b.simon/styles.css), [game.js](week3/hw3b.simon/game.js)<br>
 HW 3b: Link to Simon Game - [Simon Game](https://lilithgannone.github.io/ics385spring2026/week3/hw3b.simon/index.html)
+
+### Week 4 - NodeJS
+HW 4a: Basic NodeJS - [index.js](week4/hero-hw4/index.js), [package.js](week4/hero-hw4/package.js), [package-lock.js](week4/hero-hw4/package-lock.js)<br>
+HW 4a: Read Me - [README for HW 4a](week4/hero-hw4/README.me)
