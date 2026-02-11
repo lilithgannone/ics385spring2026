@@ -37,7 +37,7 @@ app.post("/f2c", function (req, res) {
     <form action="/f2c" method="post">
       <input type="number" name="fahrenheit" placeholder="Temperature in Fahrenheit">
       <button type="submit">Convert to Celcius</button> <br>
-      <p>Converted Temperature: = ${celcius} </p>
+      <p>Converted Temperature (As an Integer): = ${celcius} </p>
     </form>
   
     </body>
