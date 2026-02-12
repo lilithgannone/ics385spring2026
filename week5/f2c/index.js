@@ -15,7 +15,7 @@ app.get("/", function (req, res) {
 });
 
 //Human-written comment: Make the page refreshable.
-app.get("/VolCalc", function (req, res) {
+app.get("/f2c", function (req, res) {
   res.sendFile(__dirname + "/VolCalculator.html");
 });
 
