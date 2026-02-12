@@ -14,14 +14,22 @@ app.get("/", function (req, res) {
   res.sendFile(__dirname + "/f2cCalc.html");
 });
 
-// this gets the response from the values in the web page. Found parseInt on w3schools.
+//Human-written comment: Make the page refreshable.
+app.get("/VolCalc", function (req, res) {
+  res.sendFile(__dirname + "/VolCalculator.html");
+});
+
+// this gets the response from the values in the web page.
+//Human-written comment: Found parseInt on w3schools.
 app.post("/f2c", function (req, res) {
   var fahrenheit = parseInt(req.body.fahrenheit);
 
-  // does the computation of the input variables, as numbers. Found math.round on w3schools.
+  // does the computation of the input variables, as numbers.
+  //Human-written comment: Found math.round on w3schools.
   var celcius = Math.round(((fahrenheit - 32) * 5) / 9);
 
-  // sends the results back to the web page. Had a hard time making the output display on the same page. Found some info online and on w3 schools.
+  // sends the results back to the web page.
+  //Human-written comment: Had a hard time making the output display on the same page. Found some info online and on w3 schools.
   res.send(`<!DOCTYPE html>
   <html lang="en" dir="ltr">
     <head>
