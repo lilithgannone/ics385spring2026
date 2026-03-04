@@ -83,4 +83,4 @@ HW 6c: Code Review and Update of LOS Visitor Data - [hawaii.tourism.los.calculat
 
 ### Week 8 - JSON and APIs
 HW 8a: Basic JSON - [Basic JSON Folder](week8/basic-json)<br>
-HW 8a: Basic JSON URL - [Basic JSON Folder](week8/basic-json/index.html)<br>
+HW 8a: Basic JSON URL - [URL](week8/basic-json/index.html)<br>
