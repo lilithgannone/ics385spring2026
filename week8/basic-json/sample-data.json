@@ -1,0 +1,234 @@
+{
+  "university": "University of Hawaii Maui College",
+  "semester": "Spring 2026",
+  "lastUpdated": "2026-03-03",
+  "departments": [
+    {
+      "code": "ICS",
+      "name": "Information and Computer Sciences",
+      "chair": "Dr. Jane Smith",
+      "courses": [
+        {
+          "courseCode": "ICS 385",
+          "title": "Web Development and Administration",
+          "credits": 3,
+          "description": "Detailed knowledge of web page authoring and server-side programming.",
+          "prerequisites": ["ICS 320"],
+          "instructor": {
+            "name": "Dr. Debasis Bhattacharya",
+            "email": "debasisb@hawaii.edu",
+            "office": "Kaaike 114"
+          },
+          "schedule": {
+            "days": ["Tuesday"],
+            "time": "4:30 PM - 5:45 PM",
+            "location": "Online (Zoom)",
+            "capacity": 25,
+            "enrolled": 18
+          },
+          "isActive": true,
+          "topics": ["HTML", "CSS", "JavaScript", "Node.js", "APIs", "React"],
+          "assignments": [
+            {"name": "Week 1 - Setup", "points": 1, "dueDate": "2026-01-19"},
+            {"name": "Week 2 - HTML/CSS", "points": 3, "dueDate": "2026-01-26"}
+          ]
+        }
+      ]
+    },
+    {
+      "code": "MATH",
+      "name": "Mathematics",
+      "chair": "Dr. Robert Johnson",
+      "courses": [
+        {
+          "courseCode": "MATH 140",
+          "title": "Calculus I",
+          "credits": 4,
+          "description": "Limits, derivatives, applications of derivatives.",
+          "prerequisites": ["MATH 135"],
+          "instructor": {
+            "name": "Dr. Sarah Wilson",
+            "email": "sarahw@hawaii.edu",
+            "office": "Academic Center 201"
+          },
+          "schedule": {
+            "days": ["Monday", "Wednesday", "Friday"],
+            "time": "10:00 AM - 10:50 AM",
+            "location": "AC 105",
+            "capacity": 30,
+            "enrolled": 25
+          },
+          "isActive": true,
+          "topics": ["Limits", "Derivatives", "Integration", "Applications"],
+          "assignments": [
+            {"name": "Homework 1", "points": 10, "dueDate": "2026-01-20"},
+            {"name": "Midterm Exam", "points": 100, "dueDate": "2026-03-15"}
+          ]
+        }
+      ]
+    },
+    {
+      "code": "SSM",
+      "name": "Sustainable Science Management",
+      "chair": "Dr. Morgan Lee",
+      "courses": [
+        {
+          "courseCode": "SSM 101",
+          "title": "Sustainability in a Changing World",
+          "credits": 3,
+          "description": "Identifies sustainability concepts from early industrialization to present and examines resource use including water, energy, waste, land use, economies, and oceans.",
+          "prerequisites": ["ENG 19 with grade C or better or placement at least ENG 22", "MATH 75X with grade C or better or placement at least MATH 82"],
+          "instructor": {
+            "name": "Avery Chen",
+            "email": "avery.chen@hawaii.edu",
+            "office": "Pilina 212"
+          },
+          "schedule": {
+            "days": ["Monday", "Wednesday"],
+            "time": "11:00 AM - 12:15 PM",
+            "location": "Ka Lama 106",
+            "capacity": 30,
+            "enrolled": 24
+          },
+          "isActive": true,
+          "topics": ["Sustainability", "Resource Use", "Systems Thinking", "Island Case Studies"],
+          "assignments": [
+            {"name": "Reflection 1", "points": 20, "dueDate": "2026-02-02"},
+            {"name": "Resource Analysis", "points": 40, "dueDate": "2026-03-02"}
+          ]
+        },
+        {
+          "courseCode": "SSM 201",
+          "title": "Sustainable Building Design",
+          "credits": 3,
+          "description": "Examines principles of green building design and operations including site planning, construction practices, energy efficiency, economics, and LEED.",
+          "prerequisites": ["SSM 101 with grade C or better"],
+          "instructor": {
+            "name": "Jordan Patel",
+            "email": "jordan.patel@hawaii.edu",
+            "office": "Ka Lama 214"
+          },
+          "schedule": {
+            "days": ["Tuesday", "Thursday"],
+            "time": "1:00 PM - 2:15 PM",
+            "location": "Ka Lama 203",
+            "capacity": 28,
+            "enrolled": 20
+          },
+          "isActive": true,
+          "topics": ["Green Building", "LEED", "Site Planning", "Energy Efficiency"],
+          "assignments": [
+            {"name": "LEED Case Review", "points": 30, "dueDate": "2026-02-16"},
+            {"name": "Design Proposal", "points": 60, "dueDate": "2026-04-06"}
+          ]
+        },
+        {
+          "courseCode": "SSM 202",
+          "title": "Sustainable Island Communities",
+          "credits": 3,
+          "description": "Introduces sustainability concepts on islands and examines management of limited resources including land use, waste, water, tourism, and renewable energy.",
+          "prerequisites": ["SSM 101, HWST 107, HWST 207, or HIST 284 with grade C or better"],
+          "instructor": {
+            "name": "Taylor Brooks",
+            "email": "taylor.brooks@hawaii.edu",
+            "office": "Pilina 110"
+          },
+          "schedule": {
+            "days": ["Monday", "Wednesday"],
+            "time": "2:30 PM - 3:45 PM",
+            "location": "Ka Lama 108",
+            "capacity": 32,
+            "enrolled": 27
+          },
+          "isActive": true,
+          "topics": ["Island Sustainability", "Land Use", "Waste Management", "Renewable Energy"],
+          "assignments": [
+            {"name": "Island Comparison", "points": 25, "dueDate": "2026-02-23"},
+            {"name": "Community Plan", "points": 70, "dueDate": "2026-04-13"}
+          ]
+        },
+        {
+          "courseCode": "SSM 275",
+          "title": "Basic Energy Production",
+          "credits": 3,
+          "description": "Introduces basic energy concepts and transitions from electric power grid fundamentals to renewable energy integration in distributed systems.",
+          "prerequisites": ["SSM 101 and ENG 100 with grade C or better", "MATH 103 with grade C or better or placement at least MATH 135"],
+          "instructor": {
+            "name": "Cameron Rivera",
+            "email": "cameron.rivera@hawaii.edu",
+            "office": "Ka Lama 117"
+          },
+          "schedule": {
+            "days": ["Tuesday", "Thursday"],
+            "time": "9:30 AM - 10:45 AM",
+            "location": "Science 205",
+            "capacity": 26,
+            "enrolled": 19
+          },
+          "isActive": true,
+          "topics": ["Energy Concepts", "Power Grid", "Renewables", "Energy Conversion"],
+          "assignments": [
+            {"name": "Grid Basics Quiz", "points": 20, "dueDate": "2026-02-09"},
+            {"name": "Energy Source Report", "points": 50, "dueDate": "2026-03-30"}
+          ]
+        },
+        {
+          "courseCode": "SSM 301",
+          "title": "Sustainable Assessments and Indicators",
+          "credits": 3,
+          "description": "Examines methods of assessing sustainability, including life cycle assessment, energy analysis, and sustainability indicators for data collection and analysis.",
+          "prerequisites": ["SSM 202, MATH 115, and MATH 135, all with grade C or better"],
+          "instructor": {
+            "name": "Riley Morgan",
+            "email": "riley.morgan@hawaii.edu",
+            "office": "Pilina 305"
+          },
+          "schedule": {
+            "days": ["Wednesday"],
+            "time": "5:00 PM - 7:45 PM",
+            "location": "Ka Lama 220",
+            "capacity": 24,
+            "enrolled": 16
+          },
+          "isActive": true,
+          "topics": ["Life Cycle Assessment", "Carbon Neutrality", "Indicators", "Data Analysis"],
+          "assignments": [
+            {"name": "Indicator Worksheet", "points": 30, "dueDate": "2026-02-18"},
+            {"name": "Assessment Project", "points": 80, "dueDate": "2026-04-20"}
+          ]
+        },
+        {
+          "courseCode": "SSM 302",
+          "title": "Environmental Health",
+          "credits": 3,
+          "description": "Evaluates impacts of chemical, physical, and biological agents on environmental ecosystems with emphasis on island settings.",
+          "prerequisites": ["SSM 202, BIOL 171/171L, CHEM 151 or 161/161L, and MATH 135, all with grade C or better"],
+          "instructor": {
+            "name": "Quinn Davis",
+            "email": "quinn.davis@hawaii.edu",
+            "office": "Science 112"
+          },
+          "schedule": {
+            "days": ["Friday"],
+            "time": "1:00 PM - 3:45 PM",
+            "location": "Science 118",
+            "capacity": 22,
+            "enrolled": 15
+          },
+          "isActive": true,
+          "topics": ["Environmental Ecosystems", "Island Health", "Chemical Agents", "Biological Agents"],
+          "assignments": [
+            {"name": "Case Analysis", "points": 35, "dueDate": "2026-03-06"},
+            {"name": "Environmental Impact Brief", "points": 75, "dueDate": "2026-04-24"}
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "totalCourses": 8,
+    "totalDepartments": 3,
+    "totalCreditsOffered": 25,
+    "academicYear": "2025-2026"
+  }
+}

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UH Maui College - Course Catalog</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- AI COMMENT: Header section introduces the page and gives users context about which catalog and semester they are viewing. -->
+  <!-- AI CHANGE: Added accessibility wiring and in-page feedback region -->
+  <!-- AI COMMENT: This keeps the original structure while adding a live status area so JSON/load/validation errors are visible in the UI, not only console logs. -->
+  <header>
+    <div class="header-content">
+      <h1>UH Maui College Course Catalog</h1>
+      <p>Spring 2026 - Interactive Course Browser</p>
+    </div>
+  </header>
+
+  <!-- AI COMMENT: Main contains all interactive catalog features: controls, add form, statistics, and course results. -->
+  <main>
+    <!-- AI COMMENT: Controls section holds search/filter/action inputs; JavaScript reads these IDs to run catalog interactions. -->
+    <section class="controls" aria-label="Catalog controls">
+      <div class="search-section">
+        <!-- AI COMMENT: Search input accepts free text and supports case-insensitive matching across multiple course fields. -->
+        <label class="sr-only" for="searchInput">Search courses</label>
+        <input type="text" id="searchInput" placeholder="Search courses, instructors, topics..." autocomplete="off">
+        <button id="clearSearchBtn" type="button">Clear</button>
+      </div>
+      <div class="filter-section">
+        <!-- AI COMMENT: Department and credits filters narrow the current search result set; they combine with search instead of replacing it. -->
+        <label class="sr-only" for="departmentFilter">Filter by department</label>
+        <select id="departmentFilter">
+          <option value="all">All Departments</option>
+          <option value="ICS">Computer Science</option>
+          <option value="MATH">Mathematics</option>
+        </select>
+        <label class="sr-only" for="creditsFilter">Filter by credits</label>
+        <select id="creditsFilter">
+          <option value="all">All Credit Hours</option>
+          <option value="1">1 Credit</option>
+          <option value="2">2 Credits</option>
+          <option value="3">3 Credits</option>
+          <option value="4">4 Credits</option>
+          <option value="4plus">4+ Credits</option>
+        </select>
+      </div>
+      <div class="action-section">
+        <!-- AI COMMENT: Action buttons trigger loading JSON data, toggling the add-course form, and exporting the current catalog. -->
+        <button id="loadSampleBtn" type="button">Load Sample Data</button>
+        <button id="addCourseBtn" type="button" aria-expanded="false" aria-controls="addCoursePanel">Add New Course</button>
+        <button id="exportBtn" type="button">Export JSON</button>
+      </div>
+      <!-- AI CHANGE: Added feedback container for user-friendly errors/successes -->
+      <!-- AI COMMENT: This region is used by JavaScript to display parsing, validation, and action messages with ARIA live updates. -->
+      <div id="feedbackMessage" class="feedback hidden" role="status" aria-live="polite"></div>
+    </section>
+
+    <!-- AI CHANGE: Added beginner-friendly add-course form panel -->
+    <!-- AI COMMENT: Required for addNewCourse() and validation workflow; hidden by default and toggled via the Add New Course button. -->
+    <!-- AI COMMENT: The form collects all required course fields so new entries match the same JSON schema as existing courses. -->
+    <section id="addCoursePanel" class="add-course hidden" aria-label="Add course form">
+      <h2>Add Course</h2>
+      <form id="addCourseForm" novalidate>
+        <div class="form-grid">
+          <label>
+            Department
+            <select id="newDepartment" required>
+              <option value="">Select department</option>
+            </select>
+          </label>
+          <label>
+            Course Code
+            <input type="text" id="newCourseCode" placeholder="e.g., ICS 141" required>
+          </label>
+          <label>
+            Title
+            <input type="text" id="newTitle" placeholder="Course title" required>
+          </label>
+          <label>
+            Credits
+            <input type="number" id="newCredits" min="1" max="6" value="3" required>
+          </label>
+          <label class="full-width">
+            Description
+            <textarea id="newDescription" rows="3" placeholder="Short description" required></textarea>
+          </label>
+          <label>
+            Prerequisites (comma-separated)
+            <input type="text" id="newPrerequisites" placeholder="ENG 100, MATH 103">
+          </label>
+          <label>
+            Instructor Name
+            <input type="text" id="newInstructorName" placeholder="Fictional instructor" required>
+          </label>
+          <label>
+            Instructor Email (@hawaii.edu)
+            <input type="email" id="newInstructorEmail" placeholder="name@hawaii.edu" required>
+          </label>
+          <label>
+            Instructor Office
+            <input type="text" id="newInstructorOffice" placeholder="Building 101" required>
+          </label>
+          <label>
+            Days (comma-separated)
+            <input type="text" id="newScheduleDays" placeholder="Monday, Wednesday" required>
+          </label>
+          <label>
+            Time
+            <input type="text" id="newScheduleTime" placeholder="1:00 PM - 2:15 PM" required>
+          </label>
+          <label>
+            Location
+            <input type="text" id="newScheduleLocation" placeholder="Room / Online" required>
+          </label>
+          <label>
+            Capacity
+            <input type="number" id="newCapacity" min="1" value="25" required>
+          </label>
+          <label>
+            Enrolled
+            <input type="number" id="newEnrolled" min="0" value="0" required>
+          </label>
+          <label>
+            Active Course
+            <select id="newIsActive">
+              <option value="true">true</option>
+              <option value="false">false</option>
+            </select>
+          </label>
+          <label>
+            Topics (comma-separated)
+            <input type="text" id="newTopics" placeholder="HTML, CSS, JavaScript" required>
+          </label>
+          <label class="full-width">
+            Assignment 1 Name
+            <input type="text" id="newAssignmentName" placeholder="Homework 1" required>
+          </label>
+          <label>
+            Assignment 1 Points
+            <input type="number" id="newAssignmentPoints" min="1" value="10" required>
+          </label>
+          <label>
+            Assignment 1 Due Date
+            <input type="date" id="newAssignmentDueDate" required>
+          </label>
+        </div>
+        <div class="form-actions">
+          <!-- AI COMMENT: Save submits inputs for validation and insertion, while Cancel hides the panel without editing data. -->
+          <button type="submit">Save Course</button>
+          <button type="button" id="cancelAddCourseBtn">Cancel</button>
+        </div>
+        <div id="formErrors" class="form-errors hidden" role="alert"></div>
+      </form>
+    </section>
+
+    <!-- AI COMMENT: Statistics section displays computed totals and average enrollment from the loaded catalog. -->
+    <section id="statisticsSection" class="statistics">
+      <div class="stat-item">
+        <span class="stat-number" id="totalCourses">0</span>
+        <span class="stat-label">Total Courses</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" id="totalDepartments">0</span>
+        <span class="stat-label">Departments</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" id="averageEnrollment">0%</span>
+        <span class="stat-label">Avg Enrollment</span>
+      </div>
+    </section>
+
+    <!-- AI COMMENT: Courses grid is the render target for course cards; JavaScript replaces its contents on every search/filter change. -->
+    <section id="coursesContainer" class="courses-grid" aria-live="polite">
+      <div class="loading">Loading course catalog...</div>
+    </section>
+  </main>
+
+  <!-- Course Details Modal -->
+  <!-- AI COMMENT: Modal provides a focused detail view for one course, including prerequisites, schedule, topics, and assignments. -->
+  <div id="courseModal" class="modal hidden" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-content" tabindex="-1">
+      <button class="close-btn" type="button" aria-label="Close course details">&times;</button>
+      <div id="modalBody">
+        <!-- Course details will be dynamically inserted -->
+      </div>
+    </div>
+  </div>
+
+  <!-- AI COMMENT: Footer provides assignment context and stays separate from interactive logic. -->
+  <footer>
+    <p>ICS 385 Week 8 - JSON Fundamentals Assignment</p>
+  </footer>
+
+  <!-- AI COMMENT: External script contains all app behavior (data loading, rendering, validation, filters, modal, and export). -->
+  <script src="course-catalog.js"></script>
+</body>
+</html>

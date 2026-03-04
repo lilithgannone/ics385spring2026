@@ -1,0 +1,432 @@
+/* AI CHANGE: Replaced minimal placeholder CSS with full responsive assignment styling */
+/* AI COMMENT: Styles now support responsive cards, enrollment color states, modal, add-course form, and accessible focus/contrast while keeping original file purpose. */
+
+/* AI COMMENT: Root variables centralize colors and spacing tokens so styling stays consistent and easy to tweak. */
+:root {
+  --bg: #f6f8fb;
+  --surface: #ffffff;
+  --text: #1f2937;
+  --muted: #4b5563;
+  --primary: #0f4c81;
+  --primary-hover: #0b3a62;
+  --border: #d1d5db;
+  --ok-bg: #dcfce7;
+  --ok-text: #14532d;
+  --warn-bg: #fef3c7;
+  --warn-text: #78350f;
+  --danger-bg: #fee2e2;
+  --danger-text: #7f1d1d;
+  --shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* AI COMMENT: Global box-sizing keeps layout math predictable for cards, form fields, and modal elements. */
+* {
+  box-sizing: border-box;
+}
+
+/* AI COMMENT: Base page typography/colors establish a readable default for all sections. */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.45;
+}
+
+/* AI COMMENT: Header and footer share a light banner style to frame the interactive main content. */
+header,
+footer {
+  padding: 1rem;
+  background: #e5edf5;
+  border-bottom: 1px solid #c5d4e3;
+}
+
+/* AI COMMENT: Footer-specific adjustments separate it visually from the page body. */
+footer {
+  border-top: 1px solid #c5d4e3;
+  border-bottom: 0;
+  margin-top: 1rem;
+}
+
+/* AI COMMENT: Header content width is constrained to improve readability on large screens. */
+.header-content {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* AI COMMENT: Main container centers content and prevents lines/cards from stretching too wide. */
+main {
+  padding: 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* AI COMMENT: Shared spacing below major blocks keeps the page visually organized. */
+.controls,
+.statistics,
+.courses-grid,
+.add-course {
+  margin-bottom: 1rem;
+}
+
+/* AI COMMENT: Common card-like visual styling reused by controls, stats, form panel, and course cards. */
+.controls,
+.add-course,
+.stat-item,
+.course-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+/* AI COMMENT: Inner padding gives controls room so fields/buttons are easy to scan and tap. */
+.controls {
+  padding: 1rem;
+}
+
+/* AI COMMENT: Search/filter/action rows use flex-wrap so controls remain usable on narrow screens. */
+.search-section,
+.filter-section,
+.action-section {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+/* AI COMMENT: Inherit same font across form controls and buttons for a consistent UI. */
+input,
+select,
+textarea,
+button {
+  font: inherit;
+}
+
+/* AI COMMENT: Default input/select/textarea appearance with visible borders and comfortable touch size. */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.6rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+}
+
+/* AI COMMENT: Primary button style used for all actions to keep interactions obvious. */
+button {
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 0.6rem 0.9rem;
+  cursor: pointer;
+  background: var(--primary);
+  color: #fff;
+}
+
+/* AI COMMENT: Hover state gives visual feedback when pointer users interact with buttons. */
+button:hover {
+  background: var(--primary-hover);
+}
+
+/* AI COMMENT: Disabled state communicates temporary unavailability and prevents misleading clicks. */
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* AI CHANGE: Explicit focus-visible styling for keyboard users */
+/* AI COMMENT: Visible high-contrast focus states are a WCAG baseline for keyboard accessibility. */
+:focus-visible {
+  outline: 3px solid #f59e0b;
+  outline-offset: 2px;
+}
+
+/* AI COMMENT: Feedback box styles show operation status (success/error/info) after user actions. */
+.feedback {
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: #f9fafb;
+}
+
+/* AI COMMENT: Success message colors indicate successful operations such as load/add/export. */
+.feedback.success {
+  background: var(--ok-bg);
+  color: var(--ok-text);
+  border-color: #86efac;
+}
+
+/* AI COMMENT: Error message colors indicate validation or parsing failures users must fix. */
+.feedback.error {
+  background: var(--danger-bg);
+  color: var(--danger-text);
+  border-color: #fca5a5;
+}
+
+/* AI COMMENT: Informational messages show non-error status updates like current result count. */
+.feedback.info {
+  background: #dbeafe;
+  color: #1e3a8a;
+  border-color: #93c5fd;
+}
+
+/* AI COMMENT: Utility class toggles visibility for modal, form panel, and message containers. */
+.hidden {
+  display: none !important;
+}
+
+/* AI COMMENT: Stats cards use a responsive 3-column grid on wider screens. */
+.statistics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+/* AI COMMENT: Individual statistic cards center numeric values and labels for quick scanning. */
+.stat-item {
+  padding: 0.9rem;
+  text-align: center;
+}
+
+/* AI COMMENT: Larger bold number emphasizes key metrics like totals and percentages. */
+.stat-number {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* AI COMMENT: Muted label tone keeps focus on the numeric stat while preserving context text. */
+.stat-label {
+  color: var(--muted);
+}
+
+/* AI CHANGE: Responsive course grid (1 to 3 columns) */
+/* AI COMMENT: Meets assignment requirement for responsive card layout and keeps rendering efficient when many cards are present. */
+.courses-grid {
+  min-height: 120px;
+  padding: 0.25rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.8rem;
+}
+
+/* AI COMMENT: Each course card has internal padding to separate content blocks clearly. */
+.course-card {
+  padding: 0.9rem;
+}
+
+/* AI COMMENT: Card header aligns course code and credit count on one line. */
+.course-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* AI COMMENT: Removes default heading margin so custom spacing can be controlled consistently. */
+.course-code {
+  margin: 0;
+}
+
+/* AI COMMENT: Title margin sets readable separation between header and details. */
+.course-title {
+  margin: 0.4rem 0;
+}
+
+/* AI COMMENT: Shared vertical rhythm for text metadata blocks in course cards. */
+.course-description,
+.instructor-info,
+.schedule-info,
+.enrollment-info {
+  margin: 0.45rem 0;
+}
+
+/* AI COMMENT: Topics wrap into pill tags so long lists stay readable within card width. */
+.topics {
+  display: flex;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+/* AI COMMENT: Topic tag style visually groups related keywords without overpowering core details. */
+.topic-tag {
+  display: inline-block;
+  padding: 0.2rem 0.45rem;
+  border-radius: 999px;
+  border: 1px solid #bfdbfe;
+  background: #eff6ff;
+  color: #1e3a8a;
+  font-size: 0.85rem;
+}
+
+/* AI COMMENT: Green status means enrollment level is open/healthy. */
+.enrollment-info.open {
+  background: var(--ok-bg);
+  color: var(--ok-text);
+  padding: 0.45rem;
+  border-radius: 8px;
+}
+
+/* AI COMMENT: Yellow status warns the class is filling up. */
+.enrollment-info.filling {
+  background: var(--warn-bg);
+  color: var(--warn-text);
+  padding: 0.45rem;
+  border-radius: 8px;
+}
+
+/* AI COMMENT: Red status indicates a near-full or full class. */
+.enrollment-info.full {
+  background: var(--danger-bg);
+  color: var(--danger-text);
+  padding: 0.45rem;
+  border-radius: 8px;
+}
+
+/* AI COMMENT: Loading and empty-result messages use a neutral container to stand out from cards. */
+.loading,
+.no-results {
+  padding: 1rem;
+  text-align: center;
+  background: #fff;
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+}
+
+/* AI COMMENT: Add-course panel matches card style so form feels integrated with the rest of the UI. */
+.add-course {
+  padding: 1rem;
+}
+
+/* AI COMMENT: Removes default top margin from section heading to align with panel padding. */
+.add-course h2 {
+  margin-top: 0;
+}
+
+/* AI COMMENT: Form grid arranges inputs in two columns for desktop and tablet efficiency. */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+/* AI COMMENT: Label text is emphasized so beginners can quickly map fields to required data. */
+.form-grid label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* AI COMMENT: Small top spacing separates label text from the related input control. */
+.form-grid input,
+.form-grid select,
+.form-grid textarea {
+  margin-top: 0.3rem;
+}
+
+/* AI COMMENT: Full-width utility lets larger text fields span both columns when needed. */
+.full-width {
+  grid-column: 1 / -1;
+}
+
+/* AI COMMENT: Form action buttons are grouped for a clear submit/cancel workflow. */
+.form-actions {
+  margin-top: 0.75rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* AI COMMENT: Form error box highlights validation issues returned from JavaScript checks. */
+.form-errors {
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #fca5a5;
+  background: var(--danger-bg);
+  color: var(--danger-text);
+}
+
+/* AI CHANGE: Modal visual and keyboard-friendly close behavior support */
+/* AI COMMENT: Modal uses full-screen overlay, clear contrast, and a focusable content container for accessibility. */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(17, 24, 39, 0.65);
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  z-index: 1000;
+}
+
+/* AI COMMENT: Modal content container limits width/height and scrolls if details are long. */
+.modal-content {
+  width: min(720px, 100%);
+  max-height: 90vh;
+  overflow: auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  padding: 1rem;
+  position: relative;
+}
+
+/* AI COMMENT: Close button is anchored in the corner for predictable keyboard and mouse access. */
+.close-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 1.4rem;
+  line-height: 1;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  padding: 0;
+}
+
+/* AI COMMENT: Screen-reader-only helper keeps labels accessible while visually hidden. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* AI COMMENT: Medium screens switch courses grid from one to two columns. */
+@media (min-width: 700px) {
+  .courses-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* AI COMMENT: Large screens use three columns for better space usage and browsing speed. */
+@media (min-width: 1024px) {
+  .courses-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* AI COMMENT: Mobile layout stacks stats/form fields and ensures controls meet touch target size guidance. */
+@media (max-width: 680px) {
+  .statistics {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    min-height: 44px;
+  }
+}
