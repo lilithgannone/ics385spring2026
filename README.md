@@ -76,7 +76,11 @@ HW 4b: Read Me - [README for HW 4b](week4/qrcode-hw4b/readme.md)<br>
 ### Week 5 - ExpressJS 
 HW 5b: f2cCalc - [index.js](week5/f2c/index.js), [f2cCalc.html](week5/f2c/f2cCalc.html)
 
-### Week 5 - ExpressJS 
+### Week 6 - EJS and Pug
 HW 6a: To Do List - [To Do List Folder](week6/todolist-v1)<br>
 HW 6b: Random Course Name - [Random Course Name Folder](week6/4.4 Band Generator Project-Random Course Generator)<br>
 HW 6c: Code Review and Update of LOS Visitor Data - [hawaii.tourism.los.calculator.main Folder](week6/hawaii-tourism-los-calculator-main), [Code Review](week6/hawaii-tourism-los-calculator-main/Code_Review_Template_JS_Express_LOS_Initial_Review.pdf)
+
+### Week 8 - JSON and APIs
+HW 8a: Basic JSON - [Basic JSON Folder](week8/basic-json)<br>
+HW 8a: Basic JSON URL - [Basic JSON Folder](week8/basic-json/index.html)<br>
