@@ -137,7 +137,8 @@ class CourseCatalogManager {
   }
 
   /* AI COMMENT: Parses a JSON string, validates the catalog structure, stores data, and refreshes UI sections.
-     AI COMMENT: Input/Output: input is jsonString text; output is updated app state and rendered course/stat views. */
+     AI COMMENT: Input/Output: input is jsonString text; output is updated app state and rendered course/stat views. 
+     Comment: Went through W3 schools information on parsing. Preps and validates json string before converting to js object. */
   async loadCourseData(jsonString) {
     try {
       // AI COMMENT: Prevents runtime parse errors from non-string or empty input.
@@ -205,19 +206,22 @@ class CourseCatalogManager {
   searchCourses(query) {
     // AI CHANGE: Search now updates state and combines with filters via shared pipeline.
     // AI COMMENT: This keeps behavior consistent for search + department + credits combinations and handles empty search gracefully.
+    //comment: filters the course code, title, instructions, or topics.
     this.activeSearchQuery = (query || '').trim();
     this.applyActiveFilters();
   }
 
   /* AI COMMENT: Stores selected department code and reapplies combined filtering logic.
-     AI COMMENT: Input/Output: input is department code string or 'all'; output is updated filtered view. */
+     AI COMMENT: Input/Output: input is department code string or 'all'; output is updated filtered view. 
+     comment: implements department specific "active deaprtment" course filterting*/
   filterByDepartment(departmentCode) {
     this.activeDepartment = departmentCode || 'all';
     this.applyActiveFilters();
   }
 
   /* AI COMMENT: Stores selected credits value and reapplies combined filtering logic.
-     AI COMMENT: Input/Output: input is credits string or 'all'; output is updated filtered view. */
+     AI COMMENT: Input/Output: input is credits string or 'all'; output is updated filtered view. 
+     comment: sets the active credit hour filter*/
   filterByCredits(credits) {
     this.activeCredits = credits || 'all';
     this.applyActiveFilters();
@@ -311,7 +315,8 @@ class CourseCatalogManager {
 
   /* AI COMMENT: Renders all currently filtered courses into the grid container.
      AI COMMENT: Tricky logic: uses DocumentFragment so many cards can be appended in one operation for better performance.
-     AI COMMENT: Input/Output: no direct input; output is updated DOM in #coursesContainer. */
+     AI COMMENT: Input/Output: no direct input; output is updated DOM in #coursesContainer. 
+     Comment: displays the course data by inserting them into the course container. */
   displayAllCourses() {
     const container = this.elements.coursesContainer;
     if (!container) {
@@ -339,7 +344,8 @@ class CourseCatalogManager {
   }
 
   /* AI COMMENT: Finds one course by code and renders full details into the modal.
-     AI COMMENT: Input/Output: input is courseCode; output is modal open with complete course information. */
+     AI COMMENT: Input/Output: input is courseCode; output is modal open with complete course information. 
+     comment: displays course details and displays error message if course cannot be returned*/
   showCourseDetails(courseCode) {
     const course = this.getAllCourses().find(item => item.courseCode === courseCode);
 
@@ -387,7 +393,8 @@ class CourseCatalogManager {
   }
 
   /* AI COMMENT: Computes total courses, total departments, and average enrollment percent across courses.
-     AI COMMENT: Input/Output: no input; output is an object { totalCourses, totalDepartments, averageEnrollment }. */
+     AI COMMENT: Input/Output: no input; output is an object { totalCourses, totalDepartments, averageEnrollment }. 
+     comment: actually calcualates the enrollment stats*/
   calculateEnrollmentStats() {
     const courses = this.getAllCourses();
     if (!courses.length) {
@@ -414,7 +421,8 @@ class CourseCatalogManager {
   }
 
   /* AI COMMENT: Writes computed enrollment statistics into the three stat number elements in the UI.
-     AI COMMENT: Input/Output: no direct input; output is text updates for totals/percentage. */
+     AI COMMENT: Input/Output: no direct input; output is text updates for totals/percentage. 
+     comment: writes the calculated enrollment statistics*/
   displayStatistics() {
     const stats = this.calculateEnrollmentStats();
     this.elements.totalCourses.textContent = String(stats.totalCourses);
@@ -423,7 +431,8 @@ class CourseCatalogManager {
   }
 
   /* AI COMMENT: Reads add-course form inputs, validates new course data, and appends valid course to selected department.
-     AI COMMENT: Input/Output: inputs come from form fields; output is either validation errors or updated catalog + rerender. */
+     AI COMMENT: Input/Output: inputs come from form fields; output is either validation errors or updated catalog + rerender. 
+     comment: processes the form, creates a new object, validates, and prepares it to be added to the department.*/
   addNewCourse() {
     if (!this.courseCatalog) {
       this.showErrorMessage('Load catalog data before adding a course.');
@@ -490,7 +499,8 @@ class CourseCatalogManager {
   }
 
   /* AI COMMENT: Performs detailed validation checks for required fields, value ranges, and nested objects/arrays.
-     AI COMMENT: Input/Output: input is a course object; output is { isValid: boolean, errors: string[] } for UI feedback. */
+     AI COMMENT: Input/Output: input is a course object; output is { isValid: boolean, errors: string[] } for UI feedback. 
+     comment: validates user input to data fields and returns any error messages*/
   validateCourseData(course) {
     const errors = [];
 
@@ -555,7 +565,8 @@ class CourseCatalogManager {
   }
 
   /* AI COMMENT: Serializes current catalog state and triggers a downloadable JSON file export.
-     AI COMMENT: Input/Output: no input; output is browser file download with 2-space formatted JSON. */
+     AI COMMENT: Input/Output: no input; output is browser file download with 2-space formatted JSON. 
+     comment: converts the course information to JSON and allows users to download the JSON file*/
   exportToJSON() {
     try {
       if (!this.courseCatalog) {
@@ -731,3 +742,4 @@ class CourseCatalogManager {
 document.addEventListener('DOMContentLoaded', function() {
   window.app = new CourseCatalogManager();
 });
+
