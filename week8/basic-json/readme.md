@@ -43,9 +43,7 @@ I began this assignment by reviewing the existing code listed in the assignment 
 - Export current catalog to formatted JSON (2-space indentation)
 
 ## AI GENERATED CONTENT
-<!-- AI CHANGE (REVISION): Added explicit AI-generated content disclosure section. -->
-<!-- AI COMMENT: The review checklist requires a clearly labeled AI-generated content section in the README. -->
-- Portions of this project implementation and comments were generated with AI assistance and then reviewed/edited for assignment compliance.
+- Portions of this project and comments were generated with AI assistance and then reviewed/edited for assignment compliance.
 
 ## AI GENERATED NOTES
 <!-- AI COMMENT: JSON cannot contain comments, so this section documents the schema fields for beginners without breaking sample-data.json validity. -->
