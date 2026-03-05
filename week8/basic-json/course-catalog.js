@@ -2,7 +2,8 @@
 // AI COMMENT: This class now handles data loading, validation, rendering, search/filter caching, modal details, add-course form submission, and JSON export with user-friendly UI feedback.
 class CourseCatalogManager {
   /* AI COMMENT: Constructor initializes app state containers (catalog data, filtered results, UI state) and starts setup.
-     AI COMMENT: Input/Output: no input arguments; output is a ready-to-use class instance bound to DOM controls. */
+     AI COMMENT: Input/Output: no input arguments; output is a ready-to-use class instance bound to DOM controls. 
+     comment: Per W3Schools, a constructor is a special method for creating and initializing objects created within a class*/
   constructor() {
     // AI COMMENT: Existing state properties are preserved and expanded minimally for combined filter/search behavior.
     this.courseCatalog = null;
@@ -138,7 +139,7 @@ class CourseCatalogManager {
 
   /* AI COMMENT: Parses a JSON string, validates the catalog structure, stores data, and refreshes UI sections.
      AI COMMENT: Input/Output: input is jsonString text; output is updated app state and rendered course/stat views. 
-     Comment: Went through W3 schools information on parsing. Preps and validates json string before converting to js object. */
+     Comment: Went through W3Schools information on parsing. Preps and validates json string before converting to js object. */
   async loadCourseData(jsonString) {
     try {
       // AI COMMENT: Prevents runtime parse errors from non-string or empty input.
@@ -162,7 +163,8 @@ class CourseCatalogManager {
   }
 
   /* AI COMMENT: Validates top-level catalog shape before any rendering logic runs.
-     AI COMMENT: Input/Output: input is parsed object; output is either success (no return value) or thrown Error with details. */
+     AI COMMENT: Input/Output: input is parsed object; output is either success (no return value) or thrown Error with details. 
+     comment: checks whether a catalog data object has the correct structure*/
   validateCatalogStructure(data) {
     const required = ['university', 'semester', 'departments', 'metadata'];
     const missing = required.filter(field => !Object.prototype.hasOwnProperty.call(data, field));
@@ -183,7 +185,8 @@ class CourseCatalogManager {
   }
 
   /* AI COMMENT: Flattens nested departments/courses into one searchable list while preserving department metadata.
-     AI COMMENT: Input/Output: no direct input; output is an array of normalized course objects. */
+     AI COMMENT: Input/Output: no direct input; output is an array of normalized course objects. 
+     comment: collects courses from all departments and returns a list*/
   getAllCourses() {
     if (!this.courseCatalog || !Array.isArray(this.courseCatalog.departments)) return [];
 
@@ -202,7 +205,8 @@ class CourseCatalogManager {
   }
 
   /* AI COMMENT: Updates current search text and reapplies full filter pipeline.
-     AI COMMENT: Input/Output: input query string; output is filteredCourses and refreshed course display. */
+     AI COMMENT: Input/Output: input query string; output is filteredCourses and refreshed course display. 
+     comment: handles the course search queries */
   searchCourses(query) {
     // AI CHANGE: Search now updates state and combines with filters via shared pipeline.
     // AI COMMENT: This keeps behavior consistent for search + department + credits combinations and handles empty search gracefully.
@@ -213,7 +217,7 @@ class CourseCatalogManager {
 
   /* AI COMMENT: Stores selected department code and reapplies combined filtering logic.
      AI COMMENT: Input/Output: input is department code string or 'all'; output is updated filtered view. 
-     comment: implements department specific "active deaprtment" course filterting*/
+     comment: implements department-specific "active department" course filtering*/
   filterByDepartment(departmentCode) {
     this.activeDepartment = departmentCode || 'all';
     this.applyActiveFilters();
@@ -229,7 +233,8 @@ class CourseCatalogManager {
 
   /* AI COMMENT: Core search/filter pipeline that combines search term, department filter, and credits filter.
      AI COMMENT: Tricky logic: search results are cached in Map by lowercase term to avoid recomputing on repeated queries.
-     AI COMMENT: Input/Output: no direct parameters; output is this.filteredCourses plus rerendered UI/stat message. */
+     AI COMMENT: Input/Output: no direct parameters; output is this.filteredCourses plus rerendered UI/stat message. 
+     comment: main filtering pipeline*/
   applyActiveFilters() {
     const allCourses = this.getAllCourses();
     let workingSet = allCourses;
@@ -282,7 +287,8 @@ class CourseCatalogManager {
   }
 
   /* AI COMMENT: Builds one course card DOM node from a course object and computes enrollment badge status.
-     AI COMMENT: Input/Output: input is a course object; output is an <article> element ready to append. */
+     AI COMMENT: Input/Output: input is a course object; output is an <article> element ready to append. 
+     comment: builds and returns the visual course card */
   createCourseCard(course) {
     const cardDiv = document.createElement('article');
     cardDiv.className = 'course-card';
@@ -316,7 +322,7 @@ class CourseCatalogManager {
   /* AI COMMENT: Renders all currently filtered courses into the grid container.
      AI COMMENT: Tricky logic: uses DocumentFragment so many cards can be appended in one operation for better performance.
      AI COMMENT: Input/Output: no direct input; output is updated DOM in #coursesContainer. 
-     Comment: displays the course data by inserting them into the course container. */
+     Comment: displays the course data by inserting it into the course container. */
   displayAllCourses() {
     const container = this.elements.coursesContainer;
     if (!container) {
@@ -345,7 +351,7 @@ class CourseCatalogManager {
 
   /* AI COMMENT: Finds one course by code and renders full details into the modal.
      AI COMMENT: Input/Output: input is courseCode; output is modal open with complete course information. 
-     comment: displays course details and displays error message if course cannot be returned*/
+     comment: displays course details and displays an error message if the course cannot be returned*/
   showCourseDetails(courseCode) {
     const course = this.getAllCourses().find(item => item.courseCode === courseCode);
 
@@ -383,7 +389,8 @@ class CourseCatalogManager {
   }
 
   /* AI COMMENT: Hides details modal and restores keyboard focus to the element that opened it.
-     AI COMMENT: Input/Output: no input; output is accessible modal close behavior. */
+     AI COMMENT: Input/Output: no input; output is accessible modal close behavior. 
+     comment: closes modal window and restores keyboard focus*/
   closeModal() {
     this.elements.courseModal.classList.add('hidden');
     this.elements.courseModal.setAttribute('aria-hidden', 'true');
@@ -394,7 +401,7 @@ class CourseCatalogManager {
 
   /* AI COMMENT: Computes total courses, total departments, and average enrollment percent across courses.
      AI COMMENT: Input/Output: no input; output is an object { totalCourses, totalDepartments, averageEnrollment }. 
-     comment: actually calcualates the enrollment stats*/
+     comment: calculates the enrollment stats*/
   calculateEnrollmentStats() {
     const courses = this.getAllCourses();
     if (!courses.length) {
@@ -484,7 +491,7 @@ class CourseCatalogManager {
 
     department.courses.push(newCourse);
 
-    // AI COMMENT: Keep metadata in sync only when field exists.
+    // AI COMMENT: Keep metadata in sync only when the field exists.
     if (this.courseCatalog.metadata && typeof this.courseCatalog.metadata.totalCourses === 'number') {
       this.courseCatalog.metadata.totalCourses += 1;
     }
@@ -592,7 +599,8 @@ class CourseCatalogManager {
   }
 
   /* AI COMMENT: Populates department dropdown options dynamically from loaded catalog departments.
-     AI COMMENT: Input/Output: no input; output is refreshed department options in add form and filter control. */
+     AI COMMENT: Input/Output: no input; output is refreshed department options in add form and filter control. 
+     comment: fills dropdown menus with department options*/
   populateDepartmentOptions() {
     if (!this.courseCatalog || !Array.isArray(this.courseCatalog.departments)) return;
 
@@ -674,7 +682,6 @@ class CourseCatalogManager {
      AI COMMENT: Input/Output: no input; output is full unfiltered course list view. */
   clearSearch() {
     // AI CHANGE (REVISION): Clear action now resets search and both filters.
-    // AI COMMENT: Assignment requires the Clear button to reset search and filter state together, so this method now restores all three controls to "all/empty" before rerendering.
     this.elements.searchInput.value = '';
     this.activeSearchQuery = '';
     this.activeDepartment = 'all';
@@ -742,4 +749,5 @@ class CourseCatalogManager {
 document.addEventListener('DOMContentLoaded', function() {
   window.app = new CourseCatalogManager();
 });
+
 
