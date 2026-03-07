@@ -8,12 +8,11 @@
 **Assignment:** Week 8b - Integrated Campus Dashboard<br>
 
 ## Assignment Process
-This project is an intermediate assignment, building upon assignment 8a which covered JSON fundementals. From assignment details, assignment 8n builds upon JSON fundamental knowledge via the creation of a
-comprehensive dashboard that integrates multiple APIs with secure credential management. 
+This project is an intermediate assignment, building upon assignment 8a, which covered JSON fundamentals. From assignment details, assignment 8n builds upon JSON fundamental knowledge via the creation of a comprehensive dashboard that integrates multiple APIs with secure credential management. 
 
-I began this assignment by reviewing the existing code listed in the assignment details PDF. I then reviewed the full PDF and manually created blank files. I then uploaded the PDF document to Codex as a .txt file to set up the starter code. Next, I assessed all the changes that needed to be made. I started by manually adding a .env file and updating the .gitignore file to include the .env file. I then manutally updated my keys in the .env file. I ran the html file in Live Server to both assess functionality and see what the current UI looked like. Next, I prompted Codex to integrate the starter code with the existing basic-JSON course catalog code. All changes are labeled "AI Change". I then asked that comments be added to the etirety of the code explaining it so I could properly review and understand the syntax. I then prompted Codex to make the initial basic changes using a lengthy prompt describing what needed to be done. Next, I began propting Codex on VS Code to make the needed changes detailed in the "Technical Requirements", "Required Functionality", and "Submission Requirements" sections. Throughout this process, I tested the program on a desktop. I also tested the program on mobile using a Chrome extension. At this point, I noticed an error with my weather API code, so I went into DevTools and attempted to troubleshoot. I was able to fix the issue with a fre Codex prompts. I verified the testing requirements via manual tests and AI-run tests to satisfy the testing requirments. 
+I began this assignment by reviewing the existing code listed in the assignment details PDF. I then reviewed the full PDF and manually created blank files. I then uploaded the PDF document to Codex as a .txt file to set up the starter code. Next, I assessed all the changes that needed to be made. I started by manually adding a .env file and updating the .gitignore file to include the .env file. I then manually updated my keys in the .env file. I ran the HTML file in Live Server to both assess functionality and see what the current UI looked like. Next, I prompted Codex to integrate the starter code with the existing basic-JSON course catalog code. All changes are labeled "AI Change". I then asked that comments be added to the entirety of the code, explaining it so I could properly review and understand the syntax. I then prompted Codex to make the initial basic changes using a lengthy prompt describing what needed to be done. Next, I began propting Codex on VS Code to make the needed changes detailed in the "Technical Requirements", "Required Functionality", and "Submission Requirements" sections. Throughout this process, I tested the program on a desktop. I also tested the program on mobile using a Chrome extension. At this point, I noticed an error with my weather API code, so I went into DevTools and attempted to troubleshoot. I was able to fix the issue with a few Codex prompts. I verified the testing requirements via manual tests and AI-run tests to satisfy the testing requirements. 
 
-I then did some enhancments like adding an "Update API Keys" button, adding an extra filter, and making the jokes refreshable as there was intially a bug preventing refreshes. I then asked that comments be added to the code explaining all added functionalities. I reviewed the code, made some additional changes, and then prompted for a final review to ensure all needed requirements had been met. I made a couple of final fixes and then conducted an AI code review to test the functionalities and ensure all requirments were met. I manually updated the readme file with a section titled "Feature List" explaining the added features. "Security Checklist" also added to the readme, AI generated but reviewed and altered manually. I ran the program again to ensure CSS met the needed requirements and that the program was still functional. All requirements were met, so I reviewed the code and added some manual comments labeled "comment" using what I learned from W3Schools and some autofill info from VSCode where applicable. I ran the final tests listed below in "Testing Checklist". I then uploaded the folder to GitHub.
+I then did some enhancements like adding an "Update API Keys" button, adding an extra filter, and making the jokes refreshable as there was initially a bug preventing refreshes. I then asked that comments be added to the code explaining all added functionalities. I reviewed the code, made some additional changes, and then prompted for a final review to ensure all needed requirements had been met. I made a couple of final fixes and then conducted an AI code review to test the functionalities and ensure all requirements were met. I manually updated the README file with a section titled "Feature List" explaining the added features. "Security Checklist" also added to the readme, AI-generated but reviewed and altered manually. I ran the program again to ensure CSS met the needed requirements and that the program was still functional. All requirements were met, so I reviewed the code and added some manual comments labeled "comment" using what I learned from W3Schools and some autofill info from VSCode where applicable. I ran the final tests listed below in "Testing Checklist". I then uploaded the folder to GitHub.
 
 ## Overview
 This project integrates:
@@ -58,14 +57,14 @@ The dashboard combines local and live API data into one interface with caching, 
 Technical Requirements
 - Multi-API Integration: Successfully integrate OpenWeatherMap, JokeAPI, and Chuck
 Norris (RapidAPI)
-  - Yes: all three APIs are integrated. Data is sucessfully returned. 
+  - Yes: all three APIs are integrated. Data is successfully returned. 
 - Security Implementation: Use environment variables and secure configuration
 management
   - Yes: per the below security note and the comments in the original code file reading "for demo purposes, we'll use a secure client-side approach", configuration is correct. .env is in .gitignore. As we are using purley frontend architecture for this assignment, the users API codes are visable in DevTools. That said, it does comply with the rubric instructions to my understanding as this is a demo without the full backend proxy with server setup.  
 - Error Handling: Comprehensive error handling with fallback data for all APIs
-  - Yes: API requests yse try/catch. Fallback data present for all APIs.
+  - Yes: API requests use try/catch. Fallback data present for all APIs.
 - Caching Strategy: Implement caching to reduce API calls and improve performance
-  - Yes: cache map, expiry window, manual joke refresh supports cache bypass.
+  - Yes: cache map, expiry window, and manual joke refresh support cache bypass.
 - Rate Limiting: Respect API rate limits with proper request management
   - Yes: request timestamp tracking. Enforcement occurs before request execution.
 - Responsive Design: Dashboard must work on desktop, tablet, and mobile devices
@@ -73,16 +72,16 @@ management
 - Data Integration: Combine local JSON course data with live API responses
   - Yes: Local JSON course data is loaded and merged into the same dashboard alongside live API widgets. The export feature includes courses, weather, jokes, and timestamp.
 - Real-time Updates: Automatic refresh of weather data and manual joke refresh
-  - Yes: 10 minute weather auto-refresh timer. Users can manually refresh weather data or change the refresh interval in settings. Jokes can be manually refreshed. Last update times visable on UI. 
+  - Yes: 10-minute weather auto-refresh timer. Users can manually refresh weather data or change the refresh interval in settings. Jokes can be manually refreshed. Last update times visable on UI. 
 Required Functionality
 - Course Management: Full CRUD operations from previous assignment
   - Yes: Create, Read, Update, and Delete functions. 
 - Weather Display: Current weather for Kahului with refresh capability
-  - Yes: Visable and refreshable. 
+  - Yes: Visible and refreshable. 
 - Joke Integration: Both programming jokes (JokeAPI) and Chuck Norris facts (RapidAPI)
   - Yes: Both integrated and refreshable. 
 - Dashboard Statistics: Real-time stats combining course data and API status
-  - Yes: Real time stats and API status visable on UI. 
+  - Yes: Real-time stats and API status visible on UI. 
 - API Key Management: Secure setup and validation of API credentials
   - Yes: users manually input their API keys. If there is an error, they will get an error message on the portion of the UI displaying the affected data, but the fallback data will still dsiplay. 
 - Error Recovery: Graceful degradation when APIs are unavailable
@@ -102,24 +101,24 @@ Multi-API Integration
   - Yes
 Enhanced Course Management
 - Builds upon the basic JSON assignment:
-  - Yes: builds upon past assignent using a combonation of the code in the Week 8 Intermediate Assignment details and the original Basic-JSON code. 
+  - Yes: builds upon past assignment using a combination of the code in the Week 8 Intermediate Assignment details and the original Basic-JSON code. 
 - Inherits full course catalog functionality from Assignment 1
   - Yes: course catalog code merged and refactored.
 - Integrates course data with live campus information
   - Yes: live weather data integrated. 
 - Real-time statistics combining local and API data
-  - Yes: Real time statistics that update when a course is added/ deleted. 
+  - Yes: Real-time statistics that update when a course is added/ deleted. 
 - Enhanced search and filtering capabilities
-  - All search and filtering capabilties retained. Added filter feature to display only available/ unavailable courses. 
+  - All search and filtering capabilities retained. Added filter feature to display only available/ unavailable courses. 
 Advanced Security Implementation
 - Professional secrets management:
-  - Yes, per the below security note and the comments in the original code file reading "for demo purposes, we'll use a secure client-side approach", configuration is correct. .env is in .gitignore. As we are using purley frontend architecture for this assignment, the users API codes are visable in DevTools. That said, it does comply with the rubric instructions to my understanding as this is a demo without the full backend proxy with server setup.  
+  - Yes, per the below security note and the comments in the original code file reading "for demo purposes, we'll use a secure client-side approach", configuration is correct. .env is in .gitignore. As we are using purley frontend architecture for this assignment, the users API codes are visable in DevTools. That said, it does comply with the rubric instructions to my understanding, as this is a demo without the full backend proxy with server setup.  
 - Environment Variables: Secure API key storage using .env files
-  - Yes: .env and .gitignoe employed. 
+  - Yes: .env and .gitignore employed. 
 - Configuration Management: SecureConfig class for credential validation
-  - Yes: visable in config.js.
+  - Yes: visible in config.js.
 - API Key Setup Modal: User-friendly interface for key configuration
-  - Yes: easy key configuration upon setup. Keys are easily configrable right in the UI using "Update API Keys" button. 
+  - Yes: easy key configuration upon setup. Keys are easily configurable right in the UI using the "Update API Keys" button. 
 
 
 ## Testing Checklist
@@ -165,7 +164,7 @@ Advanced Security Implementation
 - `.env.example` is provided as a safe template for required configuration keys.
 - API keys are not hardcoded in application source files; keys are entered at runtime through the UI modal.
 - API key input values are trimmed before saving to reduce auth failures from accidental whitespace.
-- API keys are hidden using password masking, but because of the demo environment user input is visable in DevTools.
+- API keys are hidden using password masking, but because of the demo environment, user input is visible in DevTools.
 - Runtime credential checks are implemented through centralized configuration validation.
 - API credentials are centralized through `SecureConfig` and `UnifiedApiClient`.
 - API request timeouts are enforced using `AbortController` to reduce hanging requests.
