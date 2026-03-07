@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UH Maui College - Campus Dashboard</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="dashboard-header">
+<div class="header-content">
+<h1>UH Maui College Campus Dashboard</h1>
+<div class="header-controls">
+<button id="settingsBtn" class="header-btn">Settings</button>
+<button id="refreshAllBtn" class="header-btn">Refresh All</button>
+<!-- AI CHANGE: update-api-keys-button -->
+<!-- AI COMMENT: Adds a minimal direct action for users to reopen existing API key modal and update saved keys without waiting for missing-key prompt. -->
+<button id="updateApiKeysBtn" class="header-btn">Update API Keys</button>
+</div>
+</div>
+</header>
+<main id="dashboard-container" class="dashboard-grid">
+<!-- Quick Stats Overview -->
+<section class="stats-overview">
+<div class="stat-card">
+<span class="stat-number" id="total-courses">-</span>
+<span class="stat-label">Courses</span>
+</div>
+<div class="stat-card">
+<span class="stat-number" id="total-students">-</span>
+<span class="stat-label">Students</span>
+</div>
+<div class="stat-card">
+<span class="stat-number" id="avg-capacity">-</span>
+<span class="stat-label">Capacity</span>
+</div>
+<div class="stat-card">
+<span class="stat-number" id="api-status">-</span>
+<span class="stat-label">API Status</span>
+</div>
+</section>
+<!-- Weather Widget -->
+<section id="weather-widget" class="dashboard-widget weather-widget">
+<div class="loading">Loading weather...</div>
+</section>
+<!-- Course Management Widget -->
+<section class="dashboard-widget course-widget">
+<div class="widget-header">
+<h3>Course Management</h3>
+<div class="widget-controls">
+<input type="text" id="courseSearch" placeholder="Search courses...">
+<select id="departmentFilter">
+<option value="all">All Departments</option>
+</select>
+<!-- AI change: credit-filter-control -->
+<!-- AI Comment: Adds the minimal credit-hours filter needed to reuse existing course management filtering behavior inside the single dashboard page. -->
+<select id="creditsFilter">
+<option value="all">All Credit Hours</option>
+<option value="1">1 Credit</option>
+<option value="2">2 Credits</option>
+<option value="3">3 Credits</option>
+<option value="4">4 Credits</option>
+<option value="4plus">4+ Credits</option>
+</select>
+<!-- AI CHANGE: availability-filter-control -->
+<!-- AI COMMENT: Adds minimal available/unavailable filtering in the same style as existing course filters. -->
+<select id="availabilityFilter">
+<option value="all">All Availability</option>
+<option value="available">Available</option>
+<option value="unavailable">Unavailable</option>
+</select>
+</div>
+</div>
+<div id="coursesContainer" class="courses-grid">
+<div class="loading">Loading courses...</div>
+</div>
+</section>
+<!-- Humor Widget -->
+<section id="humor-widget" class="dashboard-widget humor-widget">
+<div class="loading">Loading humor...</div>
+</section>
+<!-- Quick Actions -->
+<section class="dashboard-widget actions-widget">
+<div class="widget-header">
+<h3>Quick Actions</h3>
+</div>
+<div class="actions-grid">
+<button class="action-btn" onclick="dashboard.addNewCourse()">
+Add Course
+</button>
+<button class="action-btn" onclick="dashboard.exportData()">
+Export Data
+</button>
+<button class="action-btn" onclick="dashboard.refreshWeather()">
+Update Weather
+</button>
+<button class="action-btn" onclick="dashboard.refreshHumor()">
+New Jokes
+</button>
+</div>
+</section>
+</main>
+<!-- API Key Setup Modal -->
+<div id="apiKeyModal" class="modal">
+<div class="modal-content">
+<h2>API Configuration Required</h2>
+<p>Please configure your API keys to enable all dashboard features:</p>
+<div class="api-key-setup">
+<label for="openWeatherKey">OpenWeatherMap API Key:</label>
+<input type="password" id="openWeatherKey" placeholder="Enter your OpenWeather API key">
+<label for="rapidApiKey">RapidAPI Key:</label>
+<input type="password" id="rapidApiKey" placeholder="Enter your RapidAPI key">
+<div class="modal-actions">
+<button onclick="dashboard.saveApiKeys()" class="save-btn">Save Keys</button>
+<button onclick="document.getElementById('apiKeyModal').style.display='none'">Skip</button>
+</div>
+</div>
+</div>
+</div>
+<!-- AI change: add-course-panel-markup -->
+<!-- AI Comment: Adds an integrated fillable Add Course panel in the existing page so the Add Course button opens a real form instead of prompt dialogs. -->
+<div id="addCoursePanel" class="modal">
+<div class="modal-content">
+<!-- AI change: reusable-course-panel-title -->
+<!-- AI Comment: Adds an identifiable title target so the same integrated panel can be reused for both Add and Edit flows. -->
+<h2 id="coursePanelTitle">Add Course</h2>
+<div class="api-key-setup">
+<label for="newCourseCode">Course Code</label>
+<input type="text" id="newCourseCode" placeholder="ICS 490">
+<label for="newCourseTitle">Title</label>
+<input type="text" id="newCourseTitle" placeholder="Special Topics">
+<label for="newCourseDepartment">Department Code</label>
+<input type="text" id="newCourseDepartment" placeholder="ICS">
+<label for="newCourseCredits">Credits</label>
+<input type="number" id="newCourseCredits" min="1" max="6" value="3">
+<label for="newCourseDescription">Description</label>
+<input type="text" id="newCourseDescription" placeholder="Course description">
+<label for="newInstructorName">Instructor Name</label>
+<input type="text" id="newInstructorName" placeholder="Instructor">
+<label for="newInstructorEmail">Instructor Email</label>
+<input type="email" id="newInstructorEmail" placeholder="name@hawaii.edu">
+<label for="newInstructorOffice">Instructor Office</label>
+<input type="text" id="newInstructorOffice" placeholder="Building/Room">
+<label for="newCourseDays">Days (comma-separated)</label>
+<input type="text" id="newCourseDays" placeholder="Monday, Wednesday">
+<label for="newCourseTime">Time</label>
+<input type="text" id="newCourseTime" placeholder="1:00 PM - 2:15 PM">
+<label for="newCourseLocation">Location</label>
+<input type="text" id="newCourseLocation" placeholder="Room/Online">
+<label for="newCourseCapacity">Capacity</label>
+<input type="number" id="newCourseCapacity" min="1" value="30">
+<label for="newCourseEnrolled">Enrolled</label>
+<input type="number" id="newCourseEnrolled" min="0" value="0">
+<!-- AI change: add-course-validation-message -->
+<!-- AI Comment: Adds an inline error area so invalid Add Course form entries show clear feedback instead of failing silently. -->
+<div id="addCourseFormError" class="panel-error" aria-live="polite"></div>
+<div class="modal-actions">
+<button id="saveCourseBtn" class="save-btn" type="button">Save Course</button>
+<button id="closeAddCoursePanelBtn" type="button">Close</button>
+</div>
+</div>
+</div>
+</div>
+<!-- AI change: settings-panel-markup -->
+<!-- AI Comment: Adds an integrated hideable settings panel for refresh interval and default city with localStorage-backed controls. -->
+<div id="settingsPanel" class="modal">
+<div class="modal-content">
+<h2>Dashboard Settings</h2>
+<div class="api-key-setup">
+<label for="settingsRefreshMinutes">Weather Refresh Interval (minutes)</label>
+<input type="number" id="settingsRefreshMinutes" min="1" value="10">
+<!-- AI change: fixed-default-city-note -->
+<!-- AI Comment: Removes editable city input to keep weather city fixed and avoid confusing city-setting behavior while preserving a beginner-friendly settings panel. -->
+<p>Default City: Kahului</p>
+<!-- AI change: settings-validation-message -->
+<!-- AI Comment: Adds an inline error area so invalid settings entries are explained to the user before saving. -->
+<div id="settingsFormError" class="panel-error" aria-live="polite"></div>
+<div class="modal-actions">
+<button id="saveSettingsBtn" class="save-btn" type="button">Save Settings</button>
+<button id="closeSettingsPanelBtn" type="button">Close</button>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<p>ICS 385 Week 8 - Intermediate Assignment | Multi-API Dashboard</p>
+</footer>
+<!-- JavaScript Files -->
+<script src="config.js"></script>
+<script src="api-client.js"></script>
+<script src="course-catalog.js"></script>
+<script src="dashboard.js"></script>
+</body>
+</html>

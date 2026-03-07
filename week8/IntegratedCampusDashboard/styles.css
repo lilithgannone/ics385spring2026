@@ -1,0 +1,191 @@
+﻿
+/* AI change: base-dashboard-layout */
+/* AI Comment: Provides minimal structure/styling so the dashboard is readable and functional across desktop/tablet/mobile. */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f7fa;
+  color: #1f2937;
+}
+.dashboard-header {
+  background: #0f4c81;
+  color: #fff;
+  padding: 1rem;
+}
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.header-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+.header-btn,
+.action-btn,
+.save-btn,
+.refresh-btn {
+  border: 0;
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  background: #1d4ed8;
+  color: #fff;
+}
+.dashboard-grid {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.stats-overview {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+.stat-card,
+.dashboard-widget {
+  background: #fff;
+  border: 1px solid #dbe3ef;
+  border-radius: 8px;
+  padding: 0.9rem;
+}
+.stat-number {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+.widget-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+}
+.widget-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+/* AI change: credit-filter-style-match */
+/* AI Comment: Keeps the added credits filter visually consistent with existing search/department inputs in the dashboard widget. */
+#courseSearch,
+#departmentFilter,
+#creditsFilter,
+/* AI CHANGE: availability-filter-style-match */
+/* AI COMMENT: Keeps the new availability filter visually consistent with the existing search/department/credits inputs. */
+#availabilityFilter,
+/* AI change: panel-input-style-match */
+/* AI Comment: Applies the existing input styling to new Add Course and Settings panel fields so UI stays consistent and beginner-friendly. */
+#newCourseCode,
+#newCourseTitle,
+#newCourseDepartment,
+#newCourseCredits,
+#newCourseDescription,
+#newInstructorName,
+#newInstructorEmail,
+#newInstructorOffice,
+#newCourseDays,
+#newCourseTime,
+#newCourseLocation,
+#newCourseCapacity,
+#newCourseEnrolled,
+#settingsRefreshMinutes,
+#openWeatherKey,
+#rapidApiKey {
+  padding: 0.5rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+}
+.courses-grid {
+  display: grid;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+.course-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 0.6rem;
+  background: #f8fafc;
+}
+.course-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.4rem;
+}
+.course-actions button {
+  border: 0;
+  border-radius: 4px;
+  padding: 0.35rem 0.55rem;
+  cursor: pointer;
+}
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.5);
+  padding: 1rem;
+}
+/* AI change: integrated-panel-visibility */
+/* AI Comment: Adds a simple class-based toggle so Add Course and Settings panels can open/close without page reload. */
+.modal.is-open {
+  display: block;
+}
+.modal-content {
+  max-width: 480px;
+  margin: 5vh auto;
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+.api-key-setup,
+.modal-actions,
+.actions-grid,
+.details {
+  display: grid;
+  gap: 0.5rem;
+}
+.actions-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.error-message,
+.initialization-error {
+  color: #b91c1c;
+}
+/* AI change: panel-error-style */
+/* AI Comment: Provides simple visible styling for Add Course and Settings validation messages. */
+.panel-error {
+  min-height: 1.1rem;
+  color: #b91c1c;
+  font-size: 0.9rem;
+}
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: #475569;
+}
+
+/* AI change: responsive-breakpoints */
+/* AI Comment: Adds minimal breakpoints to keep widgets/cards usable on tablet and mobile widths. */
+@media (max-width: 900px) {
+  .stats-overview {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 640px) {
+  .header-content,
+  .widget-header,
+  .widget-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .stats-overview,
+  .actions-grid {
+    grid-template-columns: 1fr;
+  }
+}
