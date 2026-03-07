@@ -16,7 +16,7 @@ period: this.config.apis[service].rateLimit.period
 });
 });
 }
-// Comment: Cebtralized API request method. Built in error handling. Caches successful responses and enforces rate limits. Returns fallback data on failure.
+// Comment: Centralized API request method. Built-in error handling. Caches successful responses and enforces rate limits. Returns fallback data on failure.
 async makeRequest(service, endpoint, params = {}, options = {}) {
 try {
 // Check rate limiting
@@ -125,7 +125,7 @@ timestamp: Date.now()
 }
 // AI change: response-normalizer
 // AI Comment: Adds minimal response normalization to separate successful weather payloads from fallback/error payloads.
-// Commment:  Allows the dashboard to display valid weather data without showing fallback error messages, while still providing consistent error handling and fallback data for all APIs.
+// Comment:  Allows the dashboard to display valid weather data without showing fallback error messages, while still providing consistent error handling and fallback data for all APIs.
 normalizeResponse(service, data) {
 if (service === 'openWeather') {
 return Object.assign({}, data, { error: false, isFallback: false, message: '' });
