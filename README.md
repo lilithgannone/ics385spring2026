@@ -84,5 +84,5 @@ HW 6c: Code Review and Update of LOS Visitor Data - [hawaii.tourism.los.calculat
 ### Week 8 - JSON and APIs
 HW 8a: Basic JSON - [Basic JSON Folder](week8/basic-json)<br>
 HW 8a: Basic JSON URL - [URL](https://lilithgannone.github.io/ics385spring2026/week8/basic-json/index.html)<br>
-HW 8b: Integrated Campus Dashboard - [Integrated Campus Dashboard Folder](week8/integratedcampusdashboard)<br>
-HW 8a: Integrated Campus Dashboard - [URL](https://lilithgannone.github.io/ics385spring2026/week8/integratedcampusdashboard/index.html)<br>
+HW 8b: Integrated Campus Dashboard - [Integrated Campus Dashboard Folder](week8/IntegratedCampusDashboard)<br>
+HW 8a: Integrated Campus Dashboard - [URL](https://lilithgannone.github.io/ics385spring2026/week8/IntegratedCampusDashboard/index.html)<br>
