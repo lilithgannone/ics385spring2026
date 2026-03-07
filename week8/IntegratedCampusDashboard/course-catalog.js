@@ -105,7 +105,7 @@ this.filteredCourses = workingSet;
 return this.filteredCourses;
 }
 // AI change: stats-compatible-calculation
-// AI Comment: Reuses enrollment math based on schedule.capacity/enrolled so dashboard statistics match existing course data fields.
+// AI Comment: Reuses enrollment math based on schedule, capacity/enrolled so dashboard statistics match existing course data fields.
 calculateEnrollmentStats() {
 const courses = this.getAllCourses();
 if (!courses.length) {
