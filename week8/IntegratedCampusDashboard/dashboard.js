@@ -150,7 +150,7 @@ document.getElementById('api-status').textContent = weatherStatus;
 }
 // AI change: configurable-auto-refresh
 // AI Comment: Uses user-configured refresh interval and safely resets timers when settings change.
-// Comment: Refreshes the weaher data at the user-defined interval. Also updates the "last updated" time every minute without needing to refetch data. Also recreates timers if the user changes the refresh interval in settings.
+// Comment: Refreshes the weather data at the user-defined interval. Also updates the "last updated" time every minute without needing to refetch data. Also recreates timers if the user changes the refresh interval in settings.
 startAutoRefresh() {
 if (this.refreshTimers.has('weather')) clearInterval(this.refreshTimers.get('weather'));
 if (this.refreshTimers.has('time')) clearInterval(this.refreshTimers.get('time'));
