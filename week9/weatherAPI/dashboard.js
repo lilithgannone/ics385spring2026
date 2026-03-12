@@ -1,7 +1,7 @@
 let lat = "20.87"
 let lon = "-156.45"
 
-// Replace with your actual OpenWeather API key and latitude/longitude values
+// Replace with your actual OpenWeather API key 
 const apiKey = 'your_openweather_api_key_here';
 const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`;
 
@@ -18,3 +18,4 @@ fetch (apiUrl)
         document.getElementById('imgicon').src = `https://openweathermap.org/payload/api/media/file/${data.weather[0].icon}.png`
 
     })
+
