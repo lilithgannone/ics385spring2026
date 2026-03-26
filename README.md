@@ -86,3 +86,6 @@ HW 8a: Basic JSON - [Basic JSON Folder](week8/basic-json)<br>
 HW 8a: Basic JSON URL - [URL](https://lilithgannone.github.io/ics385spring2026/week8/basic-json/index.html)<br>
 HW 8b: Integrated Campus Dashboard - [Integrated Campus Dashboard Folder](week8/IntegratedCampusDashboard)<br>
 HW 8a: Integrated Campus Dashboard - [URL](https://lilithgannone.github.io/ics385spring2026/week8/IntegratedCampusDashboard/index.html)<br>
+
+### Week 10 - MongoDB + Term Project 3
+HW 10c: Week 10 Term 3 Project Deliverable - [Week 10 Deliverable Folder](week10/term-project)<br>
