@@ -28,5 +28,8 @@ Honeymooners: The target visitor segment for Lava Birds B&B is budget-conscious 
 5. Personalized Service: Emphasis on personalized service, with staff trained to be especially welcoming and attentive to the needs of honeymooning couples. This could include special touches like welcome gifts, room setups, and personalized recommendations for local activities and dining.
 6. Packages Offerings for Different Types of Travelers: Packages tailored to different types of travelers, such as romantic getaways for couples, family-friendly packages, and solo traveler specials, to attract a wider range of guests while still maintaining a focus on the primary target segment. The primary offerings will be packages for honeymooning couples, which will include special amenities, upgraded suites, and personalized services. Couples can opt in or out, allowing for price flexibility while still offering the opportunity for an enhanced experience.
 
+## Picture from Atlas
+<img width="648" height="987" alt="image" src="https://github.com/user-attachments/assets/042ffd01-97d0-42bd-b431-d2e8d75814d9" />
+
 ## AI Disclosure
 Completed with the help of ChatGPT. I did all the coding (with the help of existing code in the Week 10 study guide) for this portion of the assignment (Week 10), but I used ChatGPT to help with brainstorming, understanding the code, and very minorly refining the content/ to resolve encountered errors. 
