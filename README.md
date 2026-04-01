@@ -89,3 +89,6 @@ HW 8a: Integrated Campus Dashboard - [URL](https://lilithgannone.github.io/ics38
 
 ### Week 10 - MongoDB + Term Project 3
 HW 10c: Week 10 Term 3 Project Deliverable - [Week 10 Deliverable Folder](week10/term-project)<br>
+
+### Week 11 - PyMongo and Mongoose
+HW 11a: PyMongo and MongoDB - [Week 11 Customer PyMongo Script](week11/customer.py)
