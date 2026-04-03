@@ -11,16 +11,16 @@ Lily Gannone
 - **Property Type:** Vacation Rental (B&B) 
 
 ## Disclaimer: 
-Readme will be cleaned up in the final submission for user friendliness. Temporary formatting to organize thoughts, content, and document satisfaction of submission requirements. Each week's updates will be documented in the readme to track progress and ensure all requirements are met. Final version will be organized as if intended for a user audience.
+Readme will be cleaned up in the final submission for user friendliness. Temporary formatting to organize thoughts, content, and document satisfaction of submission requirements. Each week's updates will be documented in the README to track progress and ensure all requirements are met. The final version will be organized as if intended for a user audience.
 
 ## Target Visitor Segment
-Honeymooners: The target visitor segment for Lava Birds B&B is budget conscious honeymooning couples. Lava Birds B&B will cater to honeymooners, anniversary celebrators, and those looking for an affordable, cozy getaway that highlights the natural beauty of the local environment. Families and solo travelers will also be targeted, but the primary focus will be on honeymooning couples. Per the tourism dashboard, this is a niche market. Tailoring the offerings to this segment will allow for a focused approach. There are many opportunities to expand offerings to other segments.
+Honeymooners: The target visitor segment for Lava Birds B&B is budget-conscious honeymooning couples. Lava Birds B&B will cater to honeymooners, anniversary celebrators, and those looking for an affordable, cozy getaway that highlights the natural beauty of the local environment. Families and solo travelers will also be targeted, but the primary focus will be on honeymooning couples. Per the tourism dashboard, this is a niche market. Tailoring the offerings to this segment will allow for a focused approach. There are many opportunities to expand offerings to other segments.
 
 ## Week 11 Updates
 During week 11, the following features were implemented:
 - Review schema (guestName, rating 1–5, comment, date) embedded in the Property document.
 - Express routes: GET /properties, GET /properties/:id, POST /properties/:id/reviews.
-- Mongoose query operators ($gte, $lte) added to filter properties by minimum/ maximumrating.
+- Mongoose query operators ($gte, $lte) added to filter properties by minimum/maximum rating.
 - All routes tested in Postman. 
 - Postman collection exported and committed to the repo. 
 - Basic EJS template rendered at /properties listing all properties.
@@ -33,7 +33,7 @@ Looking to week 12, the following features are ready to be implemented:
     - It will be important to meet the required sections, use React functional components, apply responsive CSS, and validate WCAG 2.1 AA compliance. 
     - The features below are proposed for the marketing page.
 
-Challanges this week:
+Challenges this week:
 - Understanding how to structure the review schema and embed it in the Property document.
 - Navigating Postman to test the new routes and ensure they were working as expected. Now understood.
 - Understanding ($gte, $lte) operators and how to implement them for filtering by rating.
@@ -45,7 +45,7 @@ Challanges this week:
 - Marketing Page: Highlighting Unique Location, Affordable Pricing, Amenities, Packages, and Themed Suites
 - Peak Season Calendar (peak honeymoon travel months): Highlighting Best Times to Visit and Local Events
 
-## Potential Ways to Differntiate from Competitors
+## Potential Ways to Differentiate from Competitors
 1. Unique Location and Themed Suites: Lava Birds B&B will be located a short distance from Kilauea Volcano. The rooms will be themed around the local environment, with decor inspired by the volcanic landscape in the hopes of creating an immersive experience for guests.
 2. Cozy Luxury Feel at an Affordable Price: Mid-range, competitive pricing with cozy amenities and personalized service to create a luxurious feel without the high cost. Simple amenities like a hot tub, on-suite private outdoor space, included local tea and coffee tastings, and comfortable bedding will be provided to enhance the guest experience while keeping costs manageable. The focus will be on the natural beauty of the surroundings, allowing guests to enjoy the unique location without the need for expensive amenities.
 3. Local Experiences: Partnerships with local tour companies offering affordable package deals for guests, such as guided hikes and volcano tours.
