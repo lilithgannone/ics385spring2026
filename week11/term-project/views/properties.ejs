@@ -1,0 +1,23 @@
+<%# Minor adjstments to existing code from the study guide. Week 12 will expand upon this (will delete this comment in final version).%>
+<%# AI assisted with href line. I used AI to assist with the syntax for the href link to the property details page.%>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hawaii Properties</title>
+</head>
+<body>
+  <h1>Hawaii Hospitality Properties</h1>
+  <% properties.forEach(function(prop) { %>
+     <div>
+     <h2><%= prop.name %></h2>
+     <p>Island: <%= prop.island %></p>
+     <p>Type: <%= prop.type %></p>
+     <p>Description: <%= prop.description %></p>
+     <p>Reviews: <%= prop.reviews.length %></p>
+     <p><a href="/properties/<%= prop.id %>">View Details</a></p>
+   </div>
+    <hr>
+<% }); %>
+</body>
+</html>
+

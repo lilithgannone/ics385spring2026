@@ -1,0 +1,86 @@
+{
+  "info": {
+    "_postman_id": "6f694054-4b4b-4363-b79b-d242d8a0f165",
+    "name": "Project Tests",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52199034",
+    "_collection_link": "https://go.postman.co/collection/52199034-6f694054-4b4b-4363-b79b-d242d8a0f165?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "/properties",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/properties",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "properties"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/properties/:id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/properties/69c57b0d76541bbb3d50edc1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "properties",
+            "69c57b0d76541bbb3d50edc1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/properties/:id/reviews",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"guestName\": \"Lily Tester\",\r\n  \"rating\": 5,\r\n  \"comment\": \"Amazing stay!\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/properties/69c57b0d76541bbb3d50edc1/reviews",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "properties",
+            "69c57b0d76541bbb3d50edc1",
+            "reviews"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
