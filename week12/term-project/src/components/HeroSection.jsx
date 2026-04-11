@@ -10,7 +10,7 @@ function HeroSection({ property }) {
       <p>{property.island}</p>
       <p>{property.tagline}</p>
       <div className="hero-actions">
-        <a className="hero-cta-button" href="#contact">{property.ctaText}</a>
+        <a className="hero-cta-button" href="#contact">View Special Offers</a>
        <a className="hero-secondary-button" href="#amenities">View Amenities</a>
       </div>
     </section>
