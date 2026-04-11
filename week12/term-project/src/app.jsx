@@ -14,7 +14,7 @@ import SpecialOfferSection from "./components/SpecialOfferSection";
 // manually fetched property ID from MongoDB Compass-- hardcoded into the component. 
 // defines the main App component, create a React state variable, and handles data fetching and error handling.
 function App() {
-  const propertyId = "69da05500986d5dc44e4af9c";
+  const propertyId = "69daa0279a1fca619bdd8760";
   const [property, setProperty] = useState(null);
   const [error, setError] = useState("");
   
