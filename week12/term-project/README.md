@@ -74,8 +74,13 @@ This week was very challenging but also very rewarding. I implemented all of the
 Wireframe:
 ![IMG_1766](https://github.com/user-attachments/assets/413f182d-2e77-45a9-94cb-d007fe68188a)
 
-Logo:
+Logo First Draft:
 ![logo](https://github.com/user-attachments/assets/47f1ea2d-fcf6-4b43-a8bf-2eeb30f3bdca)
+
+Final Logo:
+<img width="516" height="484" alt="logo" src="https://github.com/user-attachments/assets/68da0f12-6659-48c3-8005-107247f86e28" />
+
+
 
 
 
