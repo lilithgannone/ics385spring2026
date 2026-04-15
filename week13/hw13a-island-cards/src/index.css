@@ -1,0 +1,34 @@
+/* Global Styles, styles that apply to the entire page-- taken from term project*/
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 10px;
+  font-family: Georgia, "Times New Roman", serif;
+  background-color: #e4fceb;
+  color: #1f2933;
+  line-height: 1.2;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 5px;
+}

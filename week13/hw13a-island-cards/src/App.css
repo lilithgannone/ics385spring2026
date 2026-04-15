@@ -1,0 +1,50 @@
+.island-card {
+  right: 0;
+  bottom: -24px;
+  width: 350px;
+  padding: 10px 25px;
+  border: 2px solid rgb(25, 0, 255);
+  border-radius: 25px;
+  background: transparent;
+  box-shadow: 10px 10px lightblue;
+  text-align: center;
+  margin-bottom: 20px;
+
+}
+.summary-card {
+  right: 0;
+  bottom: -24px;
+  width: 350px;
+  padding: 10px 25px;
+  border: 2px solid rgb(25, 0, 255);
+  border-radius: 25px;
+  background: transparent;
+  box-shadow: 10px 10px lightblue;
+  text-align: center;
+  margin-bottom: 20px;
+
+}
+
+select {
+  right: 0;
+  bottom: -24px;
+  width: 260px;
+  padding: 10px 25px;
+  border: 2px solid rgb(25, 0, 255);
+  border-radius: 25px;
+  background: transparent;
+  box-shadow: 10px 10px lightblue;
+  margin-bottom: 20px;
+}
+
+p {
+  right: 0;
+  bottom: -24px;
+  width: 260px;
+  padding: 10px 25px;
+  border: 2px solid rgb(25, 0, 255);
+  border-radius: 25px;
+  background: transparent;
+  box-shadow: 10px 10px lightblue;
+  text-align: center;
+}

@@ -1,0 +1,19 @@
+{
+  "name": "island-cards",
+  "version": "1.0.0",
+  "description": "Week 13a HW",
+  "main": "app.jsx",
+  "scripts": {
+    "client": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.4.10"
+  }
+}
