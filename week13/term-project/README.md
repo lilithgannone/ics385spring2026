@@ -28,7 +28,7 @@ Generated with the help of ChatGPT and Codex. I handled all of the planning and 
 7. Open the frontend in the browser, usually http://localhost:5173/.
 
 
-## Week 13 Updates
+## Week 13 Updates (See Data Folder for Screenshots)
 During week 13, the following features were implemented:
 - Created the dashboard page using multiple elements: Dashboard.jsx, chart jsx files, component jsx files, data JSON files, dashboard CSS file, marketing page and dashboard page jsx files, arrivals js file, metrics js file, and origin.js file.
 - Updated the file structure and code to support a multi-page application.
