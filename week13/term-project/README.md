@@ -61,6 +61,8 @@ During week 13, the following features were implemented:
 ## Reflection:
 This week was another challenging week for me. Implementing a large number of changes took quite some time, but I am satisfied with the results, and I better understand what it takes to create a multi-page application. I especially appreciate the knowledge I gained on Chart.js visualizations. In the areas of code that were AI-generated/ assisted, I manually wrote comments in, and this very much helped me better understand the concepts involved. I struggled with the CSS styling a bit this week, as the AI-generated code was not reflecting what I had in mind. Eventually, I remapped my wireframe and was able to get to something satisfactory through prompting and manual adjustments. I also reformatted my marketing page to better align with my brand. All in all, I am satisfied with my dashboard. 
 
+Next week, I will implement admin authentication using Passport.js or JWT, create an admin login page, create a protected admin dashboard route, learn how to utlize bcrypt, use csurf middleware to implement CSRF protection on the login, decide on and develop my admin-only features, decide where my special offers and or announcements will post (admin-only feature), and design the layout of my admin page. 
+
 ## Week 12 Updates
 During week 12, the following features were implemented:
 - I went with option B to prepare for week 13: ensured the local Express server is running and implemented a fetch() call to /api/properties/:id using AI assistance to understand the needed syntax and structure.
