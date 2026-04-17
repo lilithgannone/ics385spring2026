@@ -94,34 +94,34 @@ This week was very challenging but also very rewarding. I implemented all of the
 ## Week 13 Updates
 During week 13, the following features were implemented:
 - Created the dashboard page using multiple elements: Dashboard.jsx, chart jsx files, component jsx files, data JSON files, dashboard CSS file, marketing page and dashboard page jsx files, arrivals js file, metrics js file, and origin.js file.
-- Updated the file strucutre and code to support a multi-page application.
-- Decided on strucutre of the site and needed elements using PRD and wireframes.
+- Updated the file structure and code to support a multi-page application.
+- Decided on the structure of the site and needed elements using PRD and wireframes.
 - Selected which islands I wanted to pull data on.
-- Retrieved, formatted, and insterted JSON data (Hawai'i Island, Maui, and Oahu) from DBEDT.
+- Retrieved, formatted, and inserted JSON data (Hawai'i Island, Maui, and Oahu) from DBEDT.
 - Added an island selector (slctIsland)
 - Added the Arrival Chart, Origin Chart, and Metric Cards elements using API calls and Chart.js. 
 - Decided on styling elements to be added to dashboard page: live stream, lava video, CTA, misc. strings
 - Connected dashboard navigation from the site header.
-- Updated the CSS files through multiple promts as needed using GenAI. 
-- Researched volcanic data APIs and added VolcWidget. Saw the opportunity to have the backgorund color change according to aviation code, so I implimented that. 
+- Updated the CSS files through multiple prompts as needed using GenAI. 
+- Researched volcanic data APIs and added VolcWidget. Saw the opportunity to have the background color change according to the aviation code, so I implemented that. 
 - Updated env: OpenWeatherMap API key in .env as VITE_WEATHER_KEY and tested API calls.
-- Ran multiple tests on app to ensure acceptance criteria are met. 
+- Ran multiple tests on the app to ensure acceptance criteria are met. 
 - Ensured that widget updates automatically when the island selector changes.
 - Added comments to the code as needed.
-- Updated the readme with guide for users. 
+- Updated the readme with a guide for users. 
 
 
 ## Challenges this week:
 - Understanding how to set up the React project and structure the files.
 - Understanding how to transition to a multi-page app.
-- Resolving anvigation button errors I encounted when paths changed.
-- Understanding how to impliment the weather widget.
-- Understanging "react-router-dom"
+- Resolving navigation button errors I encountered when paths changed.
+- Understanding how to implement the weather widget.
+- Understanding "react-router-dom"
 - Fetching and formatting the correct data from DBDET.
-- Decding on CSS sytling and formatting. Prompting GenAI was somewhat difficult as t struggled to render all of the elements in a pleasing way.
+- Deciding on CSS styling and formatting. Prompting GenAI was somewhat difficult as it struggled to render all of the elements in a pleasing way.
 - CSS styling and layout. I wanted to do as much as I could manually, but if I wanted a complex and aesthetically pleasing design, I needed to use some AI assistance to understand how to implement the design I wanted. 
 - Understanding what makes the widgets update automatically.
 
 ## Reflection:
-This week was another challanging week for me. Implimenting a large amount of chnages took quite some time, but I am satisfied with the results and I better understand what it takes to create a multi-page application. I especially apprecite the knowledge I gained on Chart.js visualizations. In the areas of code that were AI generated/ assisted, I manually wrote comments in, and this very much helped me better understand the concepts involved. I struggled with the CSS styling a bit this week as well as the AI generated code was not reflecting what I had in mind. Eventually, I remapped my wireframe and was able to get to something saisfactory through prompting and manual adjusmtnets. I also reformatted my marketing page to better align with my brand. All in all, I am satisfied with my dashboard. 
+This week was another challenging week for me. Implementing a large number of changes took quite some time, but I am satisfied with the results, and I better understand what it takes to create a multi-page application. I especially appreciate the knowledge I gained on Chart.js visualizations. In the areas of code that were AI-generated/ assisted, I manually wrote comments in, and this very much helped me better understand the concepts involved. I struggled with the CSS styling a bit this week, as the AI-generated code was not reflecting what I had in mind. Eventually, I remapped my wireframe and was able to get to something satisfactory through prompting and manual adjustments. I also reformatted my marketing page to better align with my brand. All in all, I am satisfied with my dashboard. 
 
