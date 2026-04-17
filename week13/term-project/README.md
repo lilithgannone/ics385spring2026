@@ -27,27 +27,39 @@ Generated with the help of ChatGPT and Codex. I handled all of the planning and 
 6. In a second terminal, start the Vite frontend with npm run client.
 7. Open the frontend in the browser, usually http://localhost:5173/.
 
-## Week 11 Updates
-During week 11, the following features were implemented:
-- Review schema (guestName, rating 1–5, comment, date) embedded in the Property document.
-- Express routes: GET /properties, GET /properties/:id, POST /properties/:id/reviews.
-- Mongoose query operators ($gte, $lte) added to filter properties by minimum/maximum rating.
-- All routes tested in Postman. 
-- Postman collection exported and committed to the repo. 
-- Basic EJS template rendered at /properties listing all properties.
-- Checked EJS rendering in browser.
 
-Looking to week 12, the following features are ready to be implemented:
-- React Marketing Page
-    - Route is prepared in properties.js.
-    - Endpoint returns all fields the marketing page will need: name, island, type, description, amenities, targetSegment, imageURL.
-    - It will be important to meet the required sections, use React functional components, apply responsive CSS, and validate WCAG 2.1 AA compliance. 
-    - The features below are proposed for the marketing page.
+## Week 13 Updates
+During week 13, the following features were implemented:
+- Created the dashboard page using multiple elements: Dashboard.jsx, chart jsx files, component jsx files, data JSON files, dashboard CSS file, marketing page and dashboard page jsx files, arrivals js file, metrics js file, and origin.js file.
+- Updated the file structure and code to support a multi-page application.
+- Decided on the structure of the site and needed elements using PRD and wireframes.
+- Selected which islands I wanted to pull data on.
+- Retrieved, formatted, and inserted JSON data (Hawai'i Island, Maui, and Oahu) from DBEDT.
+- Added an island selector (slctIsland)
+- Added the Arrival Chart, Origin Chart, and Metric Cards elements using API calls and Chart.js. 
+- Decided on styling elements to be added to dashboard page: live stream, lava video, CTA, misc. strings
+- Connected dashboard navigation from the site header.
+- Updated the CSS files through multiple prompts as needed using GenAI. 
+- Researched volcanic data APIs and added VolcWidget. Saw the opportunity to have the background color change according to the aviation code, so I implemented that. 
+- Updated env: OpenWeatherMap API key in .env as VITE_WEATHER_KEY and tested API calls.
+- Ran multiple tests on the app to ensure acceptance criteria are met. 
+- Ensured that widget updates automatically when the island selector changes.
+- Added comments to the code as needed.
+- Updated the readme with a guide for users. 
 
-Challenges this week:
-- Understanding how to structure the review schema and embed it in the Property document.
-- Navigating Postman to test the new routes and ensure they were working as expected. Now understood.
-- Understanding ($gte, $lte) operators and how to implement them for filtering by rating.
+## Challenges this week:
+- Understanding how to set up the React project and structure the files.
+- Understanding how to transition to a multi-page app.
+- Resolving navigation button errors I encountered when paths changed.
+- Understanding how to implement the weather widget.
+- Understanding "react-router-dom"
+- Fetching and formatting the correct data from DBDET.
+- Deciding on CSS styling and formatting. Prompting GenAI was somewhat difficult as it struggled to render all of the elements in a pleasing way.
+- CSS styling and layout. I wanted to do as much as I could manually, but if I wanted a complex and aesthetically pleasing design, I needed to use some AI assistance to understand how to implement the design I wanted. 
+- Understanding what makes the widgets update automatically.
+
+## Reflection:
+This week was another challenging week for me. Implementing a large number of changes took quite some time, but I am satisfied with the results, and I better understand what it takes to create a multi-page application. I especially appreciate the knowledge I gained on Chart.js visualizations. In the areas of code that were AI-generated/ assisted, I manually wrote comments in, and this very much helped me better understand the concepts involved. I struggled with the CSS styling a bit this week, as the AI-generated code was not reflecting what I had in mind. Eventually, I remapped my wireframe and was able to get to something satisfactory through prompting and manual adjustments. I also reformatted my marketing page to better align with my brand. All in all, I am satisfied with my dashboard. 
 
 ## Week 12 Updates
 During week 12, the following features were implemented:
@@ -91,37 +103,27 @@ This week was very challenging but also very rewarding. I implemented all of the
 ## Final Logo:
 <img width="516" height="484" alt="logo" src="https://github.com/user-attachments/assets/68da0f12-6659-48c3-8005-107247f86e28" />
 
-## Week 13 Updates
-During week 13, the following features were implemented:
-- Created the dashboard page using multiple elements: Dashboard.jsx, chart jsx files, component jsx files, data JSON files, dashboard CSS file, marketing page and dashboard page jsx files, arrivals js file, metrics js file, and origin.js file.
-- Updated the file structure and code to support a multi-page application.
-- Decided on the structure of the site and needed elements using PRD and wireframes.
-- Selected which islands I wanted to pull data on.
-- Retrieved, formatted, and inserted JSON data (Hawai'i Island, Maui, and Oahu) from DBEDT.
-- Added an island selector (slctIsland)
-- Added the Arrival Chart, Origin Chart, and Metric Cards elements using API calls and Chart.js. 
-- Decided on styling elements to be added to dashboard page: live stream, lava video, CTA, misc. strings
-- Connected dashboard navigation from the site header.
-- Updated the CSS files through multiple prompts as needed using GenAI. 
-- Researched volcanic data APIs and added VolcWidget. Saw the opportunity to have the background color change according to the aviation code, so I implemented that. 
-- Updated env: OpenWeatherMap API key in .env as VITE_WEATHER_KEY and tested API calls.
-- Ran multiple tests on the app to ensure acceptance criteria are met. 
-- Ensured that widget updates automatically when the island selector changes.
-- Added comments to the code as needed.
-- Updated the readme with a guide for users. 
+## Week 11 Updates
+During week 11, the following features were implemented:
+- Review schema (guestName, rating 1–5, comment, date) embedded in the Property document.
+- Express routes: GET /properties, GET /properties/:id, POST /properties/:id/reviews.
+- Mongoose query operators ($gte, $lte) added to filter properties by minimum/maximum rating.
+- All routes tested in Postman. 
+- Postman collection exported and committed to the repo. 
+- Basic EJS template rendered at /properties listing all properties.
+- Checked EJS rendering in browser.
+
+Looking to week 12, the following features are ready to be implemented:
+- React Marketing Page
+    - Route is prepared in properties.js.
+    - Endpoint returns all fields the marketing page will need: name, island, type, description, amenities, targetSegment, imageURL.
+    - It will be important to meet the required sections, use React functional components, apply responsive CSS, and validate WCAG 2.1 AA compliance. 
+    - The features below are proposed for the marketing page.
+
+Challenges this week:
+- Understanding how to structure the review schema and embed it in the Property document.
+- Navigating Postman to test the new routes and ensure they were working as expected. Now understood.
+- Understanding ($gte, $lte) operators and how to implement them for filtering by rating.
 
 
-## Challenges this week:
-- Understanding how to set up the React project and structure the files.
-- Understanding how to transition to a multi-page app.
-- Resolving navigation button errors I encountered when paths changed.
-- Understanding how to implement the weather widget.
-- Understanding "react-router-dom"
-- Fetching and formatting the correct data from DBDET.
-- Deciding on CSS styling and formatting. Prompting GenAI was somewhat difficult as it struggled to render all of the elements in a pleasing way.
-- CSS styling and layout. I wanted to do as much as I could manually, but if I wanted a complex and aesthetically pleasing design, I needed to use some AI assistance to understand how to implement the design I wanted. 
-- Understanding what makes the widgets update automatically.
-
-## Reflection:
-This week was another challenging week for me. Implementing a large number of changes took quite some time, but I am satisfied with the results, and I better understand what it takes to create a multi-page application. I especially appreciate the knowledge I gained on Chart.js visualizations. In the areas of code that were AI-generated/ assisted, I manually wrote comments in, and this very much helped me better understand the concepts involved. I struggled with the CSS styling a bit this week, as the AI-generated code was not reflecting what I had in mind. Eventually, I remapped my wireframe and was able to get to something satisfactory through prompting and manual adjustments. I also reformatted my marketing page to better align with my brand. All in all, I am satisfied with my dashboard. 
 
