@@ -23,9 +23,11 @@ Generated with the help of ChatGPT and Codex. I handled all of the planning and 
     - MONGO_URI=...
     - VITE_WEATHER_KEY=...
 4. Seed the database with npm run seed.
-5. Start the Express backend with npm start.
-6. In a second terminal, start the Vite frontend with npm run client.
-7. Open the frontend in the browser, usually http://localhost:5173/.
+5. Create the admin account with `node seed-admin.js`- not committed to GitHub as seed-admin.js is used for local setup only. 
+6. Start the Express backend with npm start.
+7. In a second terminal, start the Vite frontend with npm run client.
+8. Open the frontend in the browser, usually http://localhost:5173/.
+
 
 ### Admin Email: admin@lavabirdsbb.com
 
