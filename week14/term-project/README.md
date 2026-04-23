@@ -27,6 +27,8 @@ Generated with the help of ChatGPT and Codex. I handled all of the planning and 
 6. In a second terminal, start the Vite frontend with npm run client.
 7. Open the frontend in the browser, usually http://localhost:5173/.
 
+### Admin Email: admin@lavabirdsbb.com
+
 ## Week 14 Updates (See Data Folder for Screenshots and PRD)
 During week 14, the following features were implemented:
 - Created the admin dashboard page with EJS and added a protected route for it in Express.
