@@ -35,30 +35,30 @@ During week 14, the following features were implemented:
 - Styled the admin login and dashboard pages with CSS
 - Added admin header/navigation for the admin pages
 - Created the admin special offer editing form on the dashboard
-- Ensures that the marketing page special offer content updates from admin changes
+- Ensures that the marketing page's special offer content updates from admin changes
 - Added a public review posting form on the marketing page
 - Review submission saves into MongoDB and updates the average rating and review count for the property
 - Updated the review calculation
-- Added a public contact popup form replacing the old mailto logic. Sumbissions will post on the admin dashboard and save to MongoDB. Admins can clear the messages through a checkbox-based delete function.
-- Added an admin “View Reviews” popup on the dashboard
-- Did some minor UI fixes on the marketing page like spacing and placeholder text.
+- Added a public contact popup form replacing the old mailto logic. Submissions will post on the admin dashboard and save to MongoDB. Admins can clear the messages through a checkbox-based delete function.
+- Added an admin “View Reviews” pop-up on the dashboard
+- Did some minor UI fixes on the marketing page, like spacing and placeholder text.
 - Ensured there was placeholder text on the review form and contact form, and that the review form only accepts ratings between 1 and 5.
 - Tested out the password hashing and salting with bcrypt in the admin registration route.
-- Original logic allowed people to go back after logout and view the dashboard. I added logic to prevent this.
-- Tested formatting in mobile. 
+- Original logic allowed people to go back after logging out and view the dashboard. I added logic to prevent this.
+- Tested formatting on mobile. 
 
 
 ## Challenges this week:
 - Understanding how to implement authentication and protected routes.
 - Understanding how to use bcrypt for password hashing and salting.
-- Handling some errors I encountered with the new features, such as ensuring the review form only accepts ratings between 1 and 5 and that the contact form submissions are properly saved and displayed on the admin dashboard.
+- Handling some errors I encountered with the new features, such as ensuring the review form only accepts ratings between 1 and 5, and that the contact form submissions are properly saved and displayed on the admin dashboard.
 - Implementing the admin features and ensuring that changes made in the admin dashboard properly update the marketing page content.
 - CSS styling and layout for the new admin pages and popups. I had an idea of what I wanted, but I needed AI assistance to understand how to implement the design I had in mind.
 - General learning curves with new concepts and technologies, such as authentication, bcrypt, and protected routes. The hw14b really helped me understand how to implement these features, though. 
 - I initially had a hard time understanding how the seed-admin.js logic worked. 
 
 ## Reflection:
-One challange I had intgrating the passport.js logic was understanding how it work work within existing application. I was initially confused about how to structure the files and format the code and routes. Because we are using React and Express, I had difficulty conceptualizing how to set up the authentication logic accross both the frontend and the backend. I also initially had troible understanding how the seed-admin.js logic worked. The h14b assignment really set me up for sucess. I was able to use my hw14b file as a reference and template for how to structure my authentication logic. I also utlized AI tools to understand what changes I needed to make to my existing code to implement the new features. AI tools were very helpful in this week, but I also feel like I came away with a better understanding of the concepts. I feel very positive about this week. I had a lot of fun developing the admin dashboard. I actually had to hold back on adding features because I had so many ideas for the admin dashboard and wanted to make sure I had time to implement the core features first. All in all, this week was a great learning experience.
+One challenge I had in integrating the passport.js logic was understanding how it works within the existing application. I was initially confused about how to structure the files and format the code and routes. Because we are using React and Express, I had difficulty conceptualizing how to set up the authentication logic across both the frontend and the backend. I also initially had trouble understanding how the seed-admin.js logic worked. The H14B assignment really set me up for success. I was able to use my HW14B file as a reference and template for how to structure my authentication logic. I also utilized AI tools to understand what changes I needed to make to my existing code to implement the new features. AI tools were very helpful this week, but I also feel like I came away with a better understanding of the concepts. I feel very positive about this week. I had a lot of fun developing the admin dashboard. I actually had to hold back on adding features because I had so many ideas for the admin dashboard and wanted to make sure I had time to implement the core features first. All in all, this week was a great learning experience.
 
 ## Week 13 Updates (See Data Folder for Screenshots)
 During week 13, the following features were implemented:
