@@ -45,8 +45,9 @@ During week 14, the following features were implemented:
 - Ensured there was placeholder text on the review form and contact form, and that the review form only accepts ratings between 1 and 5.
 - Tested out the password hashing and salting with bcrypt in the admin registration route.
 - Original logic allowed people to go back after logging out and view the dashboard. I added logic to prevent this.
-- Tested formatting on mobile. 
+- Tested formatting on mobile.
 
+### Note: My app.js is my server.js. I will ask in class next week if this is okay. 
 
 ## Challenges this week:
 - Understanding how to implement authentication and protected routes.
