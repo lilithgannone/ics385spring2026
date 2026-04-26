@@ -14,8 +14,7 @@ Lily Gannone
 Honeymooners: The target visitor segment for Lava Birds B&B is budget-conscious honeymooning couples. Lava Birds B&B will cater to honeymooners, anniversary celebrators, and those looking for an affordable, cozy getaway that highlights the natural beauty of the local environment. Families and solo travelers will also be targeted, but the primary focus will be on honeymooning couples. Per the tourism dashboard, this is a niche market. Tailoring the offerings to this segment will allow for a focused approach. There are many opportunities to expand offerings to other segments.
 
 ## AI Disclosure
-Generated with the help of ChatGPT and Codex. I handled all of the planning and file structure changes. Please see the reflection for details. I also handled the majority of coding entries (actual insertion) for this portion of the assignment (Week 13), but I used ChatGPT and Codex to help with brainstorming, structuring the project, writing complex code, error resolution, updating some jsx files, and refining the content. The CSS styling was primarily done with AI assistance, although some of it I manually edited after generation to fix specific issues (font sizing, margin issues, etc). 
-
+Generated with the help of ChatGPT and Codex. All primary planning and file structure change done manually. Codex was used as a coding tool, assisting with understanding and developing complex code. Please see the reflection document in the data folder for details. 
 ## Setup Steps
 1. Install Node.js and have a MongoDB database available.
 2. From the repo root, run npm install.
@@ -30,6 +29,8 @@ Generated with the help of ChatGPT and Codex. I handled all of the planning and 
 
 
 ### Admin Email: admin@lavabirdsbb.com
+
+### Live URL: *Placeholder*
 
 ## Week 14 Updates (See Data Folder for Screenshots and PRD)
 During week 14, the following features were implemented:
