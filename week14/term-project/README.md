@@ -15,6 +15,7 @@ Honeymooners: The target visitor segment for Lava Birds B&B is budget-conscious 
 
 ## AI Disclosure
 Generated with the help of ChatGPT and Codex. All primary planning and file structure change done manually. Codex was used as a coding tool, assisting with understanding and developing complex code. Please see the Weekly Reflections document in the data folder for details. 
+
 ## Setup Steps
 1. Install Node.js and have a MongoDB database available.
 2. From the repo root, run npm install.
@@ -27,7 +28,23 @@ Generated with the help of ChatGPT and Codex. All primary planning and file stru
 7. In a second terminal, start the Vite frontend with npm run client.
 8. Open the frontend in the browser, usually http://localhost:5173/.
 
+## Technology Stack
+- Frontend: React, JSX, CSS
+- Frontend build tool: Vite
+- Routing: React Router DOM
+- Charts/data visualization: Chart.js and react-chartjs-2
+- Backend: Node.js with Express
+- Database: MongoDB
+- Database library: Mongoose
+- Authentication: Passport.js, passport-local, bcrypt
+- Sessions: express-session with connect-mongo
+- Server-rendered admin pages: EJS
+- API/data format: JSON REST-style API routes
+- Environment variables: dotenv with .env
+- Static assets: images/video in public/assets
+- Development tools: npm scripts, Postman (testing)
 
 ### Admin Email: admin@lavabirdsbb.com
 
 ### Live URL: *Placeholder*
+
