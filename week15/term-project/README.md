@@ -3,7 +3,7 @@
 ## Project Title
 Full Stack  Website: Lava Birds B&B 
 
-### Live URL: [Live Render URL](https://ics385spring2026.onrender.com/)
+### Live URL: [https://ics385spring2026.onrender.com/](https://ics385spring2026.onrender.com/)
 
 ## Name 
 Lily Gannone
