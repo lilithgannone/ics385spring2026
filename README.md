@@ -91,21 +91,21 @@ HW 8a: Integrated Campus Dashboard - [URL](https://lilithgannone.github.io/ics38
 HW 10c: Week 10 Term 3 Project Deliverable - [Week 10 Deliverable Folder](week10/term-project)<br>
 
 ### Week 11 - PyMongo and Mongoose
-HW 11a: PyMongo and MongoDB - [Week 11 Customer PyMongo Script](week11/customer.py)
+HW 11a: PyMongo and MongoDB - [Week 11 Customer PyMongo Script](week11/customer.py)<br>
 Weekly Project Deliverable - [Week 11 term-project](week11/term-project)
 
 ### Week 12 - React Part 1
-Week 12 Folder-- [Week12](week12)
+Week 12 Folder-- [Week12](week12)<br>
 Weekly Project Deliverable - [Week 12 term-project](week12/term-project)
 
 ### Week 13 - React Part 2
-Week 13 Folder-- [Week13](week13)
+Week 13 Folder-- [Week13](week13)<br>
 Weekly Project Deliverable - [Week 13 term-project](week13/term-project)
 
 ### Week 14 - Authentication and Security Part 1
-Week 14 Folder-- [Week14](week14)
+Week 14 Folder-- [Week14](week14)<br>
 Weekly Project Deliverable - [Week 14 term-project](week14/term-project)
 
 ### Week 15 - Authentication and Security Part 2
-Week 15 Folder-- [Week15](week15)
+Week 15 Folder-- [Week15](week15)<br>
 Weekly Project Deliverable - [Week 15 term-project- Final Submission](week15/term-project)
