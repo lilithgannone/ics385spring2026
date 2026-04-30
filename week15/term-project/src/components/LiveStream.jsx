@@ -10,6 +10,7 @@ function LiveStream() {
           title="Kilauea Live Stream"
           allow="autoplay; encrypted-media; picture-in-picture"
           allowFullScreen
+          referrerPolicy="strict-origin-when-cross-origin"
         ></iframe>
       </div>
     </article>
