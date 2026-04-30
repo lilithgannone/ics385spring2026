@@ -63,13 +63,14 @@ app.use(session({
   }
 }));
 
+app.get("/", (req, res) => {
+  res.redirect("/properties");
+});
+
 app.get("/login", (req, res) => {
   res.redirect("/admin/login");
 });
 
-app.get("/", (req, res) => {
-  res.redirect("/properties");
-});
 
 // --- Passport middleware ---
 initPassport(passport);
