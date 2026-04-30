@@ -67,6 +67,10 @@ app.get("/login", (req, res) => {
   res.redirect("/admin/login");
 });
 
+app.get("/", (req, res) => {
+  res.redirect("/admin/login");
+});
+
 // --- Passport middleware ---
 initPassport(passport);
 app.use(passport.initialize()); // set up passport on each request
