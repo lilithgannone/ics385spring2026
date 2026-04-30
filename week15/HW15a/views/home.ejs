@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Google OAuth 2.0</title>
+</head>
+<body>
+  <main>
+    <h1>Google OAuth 2.0</h1>
+
+    <% if (user) { %>
+      <p>You are signed in as <%= user.email %>.</p>
+      <p>
+        <a href="/profile">View profile</a>
+      </p>
+    <% } else { %>
+      <a href="/auth/google">
+        <button type="button">Sign in with Google</button>
+      </a>
+    <% } %>
+  </main>
+</body>
+</html>
