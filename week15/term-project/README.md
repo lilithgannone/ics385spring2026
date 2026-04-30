@@ -30,22 +30,7 @@ Generated with the help of ChatGPT and Codex. All primary planning and file stru
 5. Create or promote to an admin account with `node seed-admin.js`- not committed to GitHub. 
 6. Start the Express backend with npm start.
 7. In a second terminal, start the Vite frontend with npm run client.
-8. Open the frontend in the browser, usually http://localhost:5173/.
-
-## Render Deployment
-Use a Render Web Service, not a Static Site.
-
-- Build Command: `npm install && npm run build`
-- Start Command: `npm start`
-- Environment Variables:
-  - `MONGO_URI`
-  - `SESSION_SECRET`
-  - `VITE_WEATHER_KEY`
-  - `GOOGLE_CLIENT_ID`
-  - `GOOGLE_CLIENT_SECRET`
-  - `NODE_ENV=production`
-
-The Express server serves the built React app from `dist/` and keeps admin pages under `/admin`.
+8. Open the frontend in the browser: will likely be http://localhost:5173/.
 
 ## Technology Stack
 - Frontend: React, JSX, CSS
