@@ -45,7 +45,7 @@ Generated with the help of ChatGPT and Codex. All primary planning and file stru
 - Server-rendered admin pages: EJS
 - API/data format: JSON REST-style API routes
 - Environment variables: dotenv with .env
-- Static assets: images/video in public/assets
+- Assets: images in public/assets
 - Development tools: npm scripts, Postman (testing)
 - Authentication: local and Google OAuth (optional)
 - Security: Helmet, CORS, express-validator
