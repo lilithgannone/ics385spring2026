@@ -21,11 +21,11 @@ Generated with the help of ChatGPT and Codex. All primary planning and file stru
 ## Setup Steps
 1. Install Node.js and have a MongoDB database available.
 2. From the repo root, run npm install.
-3. Create a .env file from .env.example (line 1) with:
+3. Create a .env file from .env.example with:
     - MONGO_URI=...
     - VITE_WEATHER_KEY=...
     - SESSION_SECRET=...
-    - Google Auth credentials if using Google OAuth 
+    - Google Auth credentials if using Google OAuth (GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET)
 4. Seed the property database with npm run seed.
 5. Create or promote to an admin account with `node seed-admin.js`- not committed to GitHub. 
 6. Start the Express backend with npm start.
