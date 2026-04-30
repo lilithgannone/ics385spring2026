@@ -68,7 +68,7 @@ app.get("/login", (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res.redirect("/admin/login");
+  res.redirect("/properties");
 });
 
 // --- Passport middleware ---
